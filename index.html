@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiral 1 | Independent Research Collective</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="family">
+    <style>
+        body { font-family: 'Inter', sans-serif; color: #333; background-color: #fdfdfd; }
+        .navbar { background-color: #0a192f; }
+        .navbar-brand, .nav-link { color: #fff !important; }
+        .hero-section { background: linear-gradient(135deg, #0a192f 0%, #172a45 100%); color: white; padding: 100px 0; }
+        .section-title { color: #0a192f; font-weight: 700; margin-bottom: 40px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: #00b4d8; margin-top: 10px; }
+        .card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .ethics-box { background-color: #f0f4f8; border-left: 4px solid #0a192f; padding: 20px; border-radius: 4px; }
+        footer { background-color: #0a192f; color: #8892b0; padding: 40px 0; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">SPIRAL 1</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ethics">Ethics & Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Spiral 1</h1>
+            <p class="lead text-muted-light mb-4" style="color: #8892b0;">Independent Research Collective & Data Systems</p>
+            <p class="mx-auto" style="max-width: 700px; font-weight: 300;">
+                Bridging dry-lab computational innovation with translational medical frameworks. We specialized in multi-omics data integration, single-cell transcriptomics, and macromolecular dynamics simulations.
+            </p>
+        </div>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">About the Collective</h2>
+            <p class="lead-text text-secondary">
+                Spiral 1 operates as a self-funded, highly agile virtual research collective. By leveraging high-performance cloud environments and open-source development frameworks, we decouple high-impact scientific inquiry from traditional structural boundaries. 
+            </p>
+        </div>
+    </section>
+
+    <section id="research" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Research Focus Clusters</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 p-4">
+                        <h4 class="fw-bold mb-3" style="color: #00b4d8;">01 / BioMedical</h4>
+                        <p class="text-secondary">Single-cell and spatial transcriptomics integration, multi-omics data mining, and machine learning pipelines for predictive disease biomarkers.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-4">
+                        <h4 class="fw-bold mb-3" style="color: #00b4d8;">02 / Technologies</h4>
+                        <p class="text-secondary">Open-source bioinformatic package engineering, custom Bash/R/Python pipelines, and scalable architectures for handling massive next-generation sequencing datasets.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-4">
+                        <h4 class="fw-bold mb-3" style="color: #00b4d8;">03 / Therapeutics</h4>
+                        <p class="text-secondary">Structure-based computational drug discovery, ligand-protein interactions, and high-throughput atomistic molecular dynamics simulations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Publications & Preprints</h2>
+            <div class="card p-4 border-start border-info border-3 mb-3">
+                <span class="text-muted small mb-1">Preprint / Under Review</span>
+                <h5 class="fw-bold mb-2">Targeting Oncogenic Drivers via Integrated Multi-Omics and Molecular Dynamics Frameworks</h5>
+                <p class="small text-secondary mb-0"><strong>Najneen Rejwana*</strong>, et al. (2026). <em>Spiral 1 Research Affiliation</em>.</p>
+            </div>
+            <p class="text-muted small mt-3">*Note: Complete open-source pipeline repositories and transcriptomic matrices are linked directly within our manuscript declarations via Zenodo and GitHub repositories.</p>
+        </div>
+    </section>
+
+    <section id="ethics" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Ethics & Institutional Disclosure</h2>
+            <div class="ethics-box">
+                <h5 class="fw-bold text-dark mb-3">Commitment to Scientific Transparency</h5>
+                <p class="text-secondary mb-0 small" style="line-height: 1.6;">
+                    <strong>Spiral 1</strong> is an independent, decentralized virtual research organization based in Dhaka, Bangladesh. As a self-funded entity, we operate without direct institutional state grants, ensuring complete intellectual flexibility. We adhere strictly to the <strong>COPE (Committee on Publication Ethics)</strong> guidelines. All computational allocations, high-performance computing (HPC) workflows, and molecular simulations associated with our publications are provisioned and audited independently.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2">&copy; 2026 Spiral 1. All Rights Reserved.</p>
+            <p class="mb-0 small text-muted">Communications: <a href="mailto:contact@spiral1.org" style="color: #00b4d8; text-decoration: none;">contact@spiral1.org</a> | Infrastructure via GitHub Network</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
