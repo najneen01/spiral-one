@@ -8,25 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        /* All-White Professional Aesthetic */
-        body, section { background-color: #ffffff !important; color: #333; font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; color: #333; background-color: #ffffff; }
         
-        .navbar { background-color: #ffffff !important; border-bottom: 1px solid #e9ecef; padding: 20px 0; }
-        .navbar-brand, .nav-link { color: #333 !important; font-weight: 600; }
+        /* Blue Header */
+        .header-blue { background-color: #0a192f; color: white; padding: 80px 0; text-align: center; }
+        .navbar { background-color: #0a192f; }
+        .navbar-brand, .nav-link { color: white !important; font-weight: 500; }
         
-        .hero-section { padding: 120px 0; text-align: center; }
-        .hero-logo { width: 140px; height: 140px; border-radius: 50%; margin-bottom: 25px; border: 1px solid #eee; object-fit: cover; }
-        
+        /* White Sections with subtle separation */
+        section { padding: 80px 0; border-bottom: 1px solid #f0f0f0; }
         .section-title { color: #0a192f; font-weight: 700; margin-bottom: 50px; }
         
-        .service-card { border: 1px solid #f0f0f0; padding: 40px; transition: 0.3s; height: 100%; border-radius: 0; }
-        .service-card:hover { border-color: #00b4d8; }
+        /* Service Cards: Clean, bordered, professional */
+        .service-card { border: 1px solid #e9ecef; padding: 40px; height: 100%; }
+        .service-card i { font-size: 2rem; color: #00b4d8; margin-bottom: 20px; display: block; }
         
-        .team-img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; }
+        .team-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid #0a192f; }
         
-        .btn-contact { background-color: #0a192f; color: #fff; padding: 15px 40px; border: none; border-radius: 0; }
-        
-        footer { padding: 50px 0; border-top: 1px solid #eee; color: #6c757d; }
+        footer { background-color: #0a192f; color: #8892b0; padding: 40px 0; text-align: center; }
     </style>
 </head>
 <body>
@@ -34,61 +33,58 @@
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">SPIRAL 1</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#services">Services</a>
-                <a class="nav-link" href="#team">Team</a>
-                <a class="nav-link" href="#publications">Publications</a>
-                <a class="nav-link" href="#contact">Contact</a>
-            </div>
         </div>
     </nav>
 
-    <header class="hero-section">
+    <header class="header-blue">
         <div class="container">
-            <img src="images/logo.png" class="hero-logo" alt="Spiral 1">
-            <h1 class="display-3 fw-bold mb-3">Spiral 1</h1>
-            <p class="lead text-muted">Computational Innovation & Translational Medical Frameworks</p>
+            <img src="images/logo.png" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid white; margin-bottom: 20px;">
+            <h1 class="display-4 fw-bold">Spiral 1</h1>
+            <p class="lead" style="color: #8892b0;">Independent Computational Research Collective</p>
         </div>
     </header>
 
-    <section id="services" class="py-5">
+    <section id="services">
         <div class="container">
-            <h2 class="section-title text-center">Our Services</h2>
-            <div class="row g-0">
+            <h2 class="section-title text-center">Core Research Services</h2>
+            <div class="row g-4">
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i class="bi bi-cpu fs-1 text-primary mb-3"></i>
+                        <i class="bi bi-cpu"></i>
                         <h5>Multi-Omics Integration</h5>
-                        <p class="text-secondary">Comprehensive analysis of transcriptomic and genomic datasets using standardized, reproducible pipelines.</p>
+                        <p class="text-secondary">Standardized pipelines for transcriptomic and genomic data fusion.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i class="bi bi-capsule fs-1 text-primary mb-3"></i>
-                        <h5>In Silico Drug Discovery</h5>
-                        <p class="text-secondary">Structure-based ligand modeling and molecular dynamics simulations to identify potential therapeutic candidates.</p>
+                        <i class="bi bi-capsule"></i>
+                        <h5>In Silico Discovery</h5>
+                        <p class="text-secondary">Molecular dynamics and ligand-binding simulations for drug lead identification.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i class="bi bi-graph-up-arrow fs-1 text-primary mb-3"></i>
-                        <h5>Bioinformatics Consulting</h5>
-                        <p class="text-secondary">Customized Bash/R/Python pipelines for high-throughput sequencing data analysis and clinical biomarker identification.</p>
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <h5>Pipeline Engineering</h5>
+                        <p class="text-secondary">Custom-built bioinformatics tools for high-throughput sequencing data.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="team" class="py-5">
+    <section id="team">
         <div class="container text-center">
             <h2 class="section-title">Principal Investigator</h2>
-            <img src="images/people1.jpg" class="team-img" alt="Najneen Rejwana">
+            <img src="images/people1.jpg" class="team-img mb-3">
             <h5>Najneen Rejwana</h5>
             <p class="text-muted">Computational Biologist</p>
         </div>
     </section>
 
-    </body>
+    <footer>
+        <p>&copy; 2026 Spiral 1. Infrastructure via GitHub Network.</p>
+    </footer>
+
+</body>
 </html>
