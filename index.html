@@ -15,15 +15,18 @@
         .navbar { background-color: #0a192f; }
         .navbar-brand, .nav-link { color: white !important; font-weight: 500; }
         
-        /* White Sections with subtle separation */
+        /* White Sections with subtle border for recognition */
         section { padding: 80px 0; border-bottom: 1px solid #f0f0f0; }
         .section-title { color: #0a192f; font-weight: 700; margin-bottom: 50px; }
         
-        /* Service Cards: Clean, bordered, professional */
-        .service-card { border: 1px solid #e9ecef; padding: 40px; height: 100%; }
+        /* Professional Service Cards */
+        .service-card { border: 1px solid #e9ecef; padding: 40px; height: 100%; transition: 0.3s; }
+        .service-card:hover { border-color: #00b4d8; }
         .service-card i { font-size: 2rem; color: #00b4d8; margin-bottom: 20px; display: block; }
         
-        .team-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid #0a192f; }
+        /* Non-circular image styling */
+        .team-img { width: 100%; max-width: 250px; height: auto; border: 1px solid #eee; }
+        .logo-header { max-width: 150px; height: auto; margin-bottom: 20px; }
         
         footer { background-color: #0a192f; color: #8892b0; padding: 40px 0; text-align: center; }
     </style>
@@ -38,7 +41,7 @@
 
     <header class="header-blue">
         <div class="container">
-            <img src="images/logo.png" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid white; margin-bottom: 20px;">
+            <img src="images/logo.png" class="logo-header" alt="Spiral 1">
             <h1 class="display-4 fw-bold">Spiral 1</h1>
             <p class="lead" style="color: #8892b0;">Independent Computational Research Collective</p>
         </div>
@@ -73,10 +76,20 @@
         </div>
     </section>
 
+    <section id="publications">
+        <div class="container">
+            <h2 class="section-title text-center">Publications & Preprints</h2>
+            <div class="card p-4 border-start border-info border-3 mb-3">
+                <h5 class="fw-bold">Targeting Oncogenic Drivers via Integrated Multi-Omics and Molecular Dynamics Frameworks</h5>
+                <p class="small text-secondary">Najneen Rejwana*, et al. (2026). <em>Spiral 1 Research Affiliation</em>.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="team">
         <div class="container text-center">
             <h2 class="section-title">Principal Investigator</h2>
-            <img src="images/people1.jpg" class="team-img mb-3">
+            <img src="images/people1.jpg" class="team-img mb-3" alt="Najneen Rejwana">
             <h5>Najneen Rejwana</h5>
             <p class="text-muted">Computational Biologist</p>
         </div>
