@@ -39,7 +39,7 @@
         /* Quote & Profile Section Spacing */
         .quote-wrapper {
             padding: 100px 0;
-            background-color: #f7fafc;
+            background-color: #ffffff;
         }
         .quote-text {
             font-size: 1.85rem;
@@ -48,18 +48,19 @@
             line-height: 1.5;
             font-style: italic;
         }
-        /* Refined Square Profile Styling */
+        /* Refined Profile Container */
         .profile-container {
             text-align: center;
         }
+        /* High-End Metallic Golden Border Frame */
         .profile-img-square {
             position: relative;
-            width: 120px;
-            height: 120px;
-            border-radius: 12px; /* Smooth professional square edges */
+            width: 140px;
+            height: 140px;
+            border-radius: 4px;
             padding: 4px;
-            background: linear-gradient(135deg, #64dfdf, #3a506b);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 100%);
+            box-shadow: 0 16px 36px rgba(179, 135, 40, 0.15);
             margin: 0 auto 20px auto;
             transition: transform 0.3s ease;
         }
@@ -70,7 +71,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 2px;
             border: 2px solid white;
         }
         .profile-name {
@@ -82,7 +83,7 @@
             font-size: 0.88rem;
             color: #4a5568;
             line-height: 1.5;
-            max-width: 320px;
+            max-width: 340px;
             margin: 0 auto;
         }
         /* Highlighted Capabilities Section Header */
@@ -92,7 +93,7 @@
             border-radius: 8px;
             padding: 40px;
         }
-        /* Sleek Corporate Cards */
+        /* Visual Layout Matching Cards */
         .card-custom {
             border: none;
             border-radius: 12px;
@@ -100,27 +101,41 @@
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
             height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
         .card-custom:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
         }
-        .icon-box {
-            width: 50px;
-            height: 50px;
-            background-color: rgba(58, 80, 107, 0.1);
-            color: #3a506b;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            margin-bottom: 20px;
-            transition: all 0.3s;
+        .card-banner-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #edf2f7;
         }
-        .card-custom:hover .icon-box {
-            background-color: #3a506b;
-            color: #ffffff;
+        .card-body-content {
+            padding: 24px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .card-title-custom {
+            font-weight: 700;
+            color: #1c2541;
+            margin-bottom: 12px;
+        }
+        .card-text-custom {
+            font-size: 0.9rem;
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .badge-container-custom {
+            margin-top: auto;
+            margin-bottom: 16px;
         }
         .badge-tech {
             background-color: #edf2f7;
@@ -129,8 +144,8 @@
             font-weight: 500;
             padding: 4px 10px;
             border-radius: 6px;
-            margin-right: 5px;
-            margin-bottom: 5px;
+            margin-right: 4px;
+            margin-bottom: 6px;
             display: inline-block;
         }
         .btn-premium {
@@ -160,7 +175,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold text-dark code-font" href="#">
-                <img src="images/spiral_logo.png" alt="SPIRALONE" style="height:35px;" class="me-2">
+                <img src="images/logo.png" alt="SPIRALONE" style="height:35px;" class="me-2">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -195,7 +210,7 @@
     <section class="quote-wrapper">
         <div class="container">
             <div class="row justify-content-center align-items-center g-5">
-                <div class="col-lg-7 text-center text-lg-start border-end-lg">
+                <div class="col-lg-7 text-center text-lg-start">
                     <blockquote class="quote-text mb-0">
                         "Data is the bridge between biological complexity and life-saving discovery. We decode the sequence of progress."
                     </blockquote>
@@ -208,7 +223,7 @@
                         </div>
                         <h4 class="profile-name">Najneen Rejwana</h4>
                         <p class="profile-credentials">
-                          founder <br>  M.Sc. (Genetics), ex-Scholar (ICCR),<br>
+                            M.Sc. (Genetics), ex-Scholar (ICCR),<br>
                             ex-Fellow (UNOSSC-EMPOWER, ICGEB- Arturo Falaschi)
                         </p>
                     </div>
@@ -227,85 +242,97 @@
 
         <div class="row g-4">
             <div class="col-md-6 col-lg-4">
-                <div class="card card-custom p-4">
-                    <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
-                    <h4 class="fw-bold mb-2">Transcriptomics</h4>
-                    <p class="text-muted small">Bulk and single-cell expression profiles mapping complex cellular heterogeneities.</p>
-                    <div class="mt-auto">
-                        <span class="badge-tech">Seurat v5</span>
-                        <span class="badge-tech">Spatial Transcriptomics</span>
-                        <span class="badge-tech">DESeq2</span>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                <div class="card card-custom">
+                    <img src="images/genomics.png" class="card-banner-img" alt="Genomics Research Domain">
+                    <div class="card-body-content">
+                        <h4 class="card-title-custom">Genomics</h4>
+                        <p class="card-text-custom">Predictive in silico modeling, deep learning sequence analysis, and structural validation pipelines.</p>
+                        <div class="badge-container-custom">
+                            <span class="badge-tech">Biomarker Discovery</span>
+                            <span class="badge-tech">Predictive Modeling</span>
+                            <span class="badge-tech">PyTorch</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="card card-custom p-4">
-                    <div class="icon-box"><i class="fa-solid fa-circle-nodes"></i></div>
-                    <h4 class="fw-bold mb-2">Proteomics</h4>
-                    <p class="text-muted small">Mapping expression dynamics, structural changes, and critical protein-protein interaction networks.</p>
-                    <div class="mt-auto">
-                        <span class="badge-tech">Mass Spec Processing</span>
-                        <span class="badge-tech">PPI Networks</span>
-                        <span class="badge-tech">PTM Mapping</span>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                <div class="card card-custom">
+                    <img src="images/transcriptomics.png" class="card-banner-img" alt="Transcriptomics Research Domain">
+                    <div class="card-body-content">
+                        <h4 class="card-title-custom">Transcriptomics</h4>
+                        <p class="card-text-custom">Bulk and single-cell expression profiles mapping complex cellular heterogeneities.</p>
+                        <div class="badge-container-custom">
+                            <span class="badge-tech">Seurat v5</span>
+                            <span class="badge-tech">Spatial Transcriptomics</span>
+                            <span class="badge-tech">DESeq2</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="card card-custom p-4">
-                    <div class="icon-box"><i class="fa-solid fa-dna"></i></div>
-                    <h4 class="fw-bold mb-2">Genomics</h4>
-                    <p class="text-muted small">Predictive in silico modeling, deep learning sequence analysis, and structural validation pipelines.</p>
-                    <div class="mt-auto">
-                        <span class="badge-tech">Biomarker Discovery</span>
-                        <span class="badge-tech">Predictive Modeling</span>
-                        <span class="badge-tech">PyTorch</span>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                <div class="card card-custom">
+                    <img src="images/ml_ai.png" class="card-banner-img" alt="ML/AI Pipeline Architectures">
+                    <div class="card-body-content">
+                        <h4 class="card-title-custom">ML / AI Architecture</h4>
+                        <p class="card-text-custom">Predictive in silico modeling, deep learning sequence analysis, and structural validation pipelines.</p>
+                        <div class="badge-container-custom">
+                            <span class="badge-tech">Biomarker Discovery</span>
+                            <span class="badge-tech">Predictive Modeling</span>
+                            <span class="badge-tech">PyTorch</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="card card-custom p-4">
-                    <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
-                    <h4 class="fw-bold mb-2">ML / AI Architecture</h4>
-                    <p class="text-muted small">Predictive in silico modeling, deep learning sequence analysis, and structural validation pipelines.</p>
-                    <div class="mt-auto">
-                        <span class="badge-tech">Biomarker Discovery</span>
-                        <span class="badge-tech">Predictive Modeling</span>
-                        <span class="badge-tech">PyTorch</span>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                <div class="card card-custom">
+                    <img src="images/proteomics.png" class="card-banner-img" alt="Proteomics Structural Data Mapping">
+                    <div class="card-body-content">
+                        <h4 class="card-title-custom">Proteomics</h4>
+                        <p class="card-text-custom">Mapping expression dynamics, structural changes, and critical protein-protein interaction networks.</p>
+                        <div class="badge-container-custom">
+                            <span class="badge-tech">Mass Spec Processing</span>
+                            <span class="badge-tech">PPI Networks</span>
+                            <span class="badge-tech">PTM Mapping</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="card card-custom p-4">
-                    <div class="icon-box"><i class="fa-solid fa-calculator"></i></div>
-                    <h4 class="fw-bold mb-2">Biostatistics</h4>
-                    <p class="text-muted small">Rigorous mathematical validation workflows ensuring data integration accuracy and survival significance.</p>
-                    <div class="mt-auto">
-                        <span class="badge-tech">Dimensionality Reduction</span>
-                        <span class="badge-tech">Survival Analysis</span>
-                        <span class="badge-tech">Multi-Omics Fusion</span>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                <div class="card card-custom">
+                    <img src="images/biostatistics.png" class="card-banner-img" alt="Biostatistical Pipelines and Survival Models">
+                    <div class="card-body-content">
+                        <h4 class="card-title-custom">Biostatistics</h4>
+                        <p class="card-text-custom">Rigorous mathematical validation workflows ensuring data integration accuracy and survival significance.</p>
+                        <div class="badge-container-custom">
+                            <span class="badge-tech">Dimensionality Reduction</span>
+                            <span class="badge-tech">Survival Analysis</span>
+                            <span class="badge-tech">Multi-Omics Fusion</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="card card-custom p-4">
-                    <div class="icon-box"><i class="fa-solid fa-flask"></i></div>
-                    <h4 class="fw-bold mb-2">Molecular Biology</h4>
-                    <p class="text-muted small">Mechanistic translational strategies bridging dry-lab discovery loops to actionable wet-lab models.</p>
-                    <div class="mt-auto">
-                        <span class="badge-tech">Target Validation</span>
-                        <span class="badge-tech">Assay Architecture</span>
-                        <span class="badge-tech">In Silico Tools</span>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                <div class="card card-custom">
+                    <img src="images/molecular_biology.png" class="card-banner-img" alt="Translational Molecular Assays">
+                    <div class="card-body-content">
+                        <h4 class="card-title-custom">Molecular Biology</h4>
+                        <p class="card-text-custom">Mechanistic translational strategies bridging dry-lab discovery loops to actionable wet-lab models.</p>
+                        <div class="badge-container-custom">
+                            <span class="badge-tech">Target Validation</span>
+                            <span class="badge-tech">Assay Architecture</span>
+                            <span class="badge-tech">In Silico Tools</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
