@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spiral One | Next-Generation Computational Biology & Multi-Omics</title>
     
-    <link rel="icon" type="image/png" href="images/spiral_logo_transparent.png">
+    <link rel="icon" type="image/spiral_logo_transparent.png" href="spiral_logo.png">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -110,7 +110,7 @@
         .founder-socials a.researchgate-icon:hover { color: #00ccbb; }
         .founder-socials a.linkedin-icon:hover { color: #0077b5; }
 
-        /* Drop-Up Trigger Header Style */
+        /* Dropdown Trigger Header Style */
         .capabilities-popup-bar {
             position: relative;
             background: #ffffff;
@@ -123,7 +123,7 @@
             user-select: none;
         }
         .capabilities-popup-bar::after {
-            content: '\f077'; /* Up chevron */
+            content: '\f077'; /* Up chevron by default when panel is open */
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute;
@@ -133,7 +133,7 @@
             color: #a0aec0;
             transition: transform 0.3s ease;
         }
-        /* Rotates chevron downward if collapsed */
+        /* Rotates chevron downward if panel gets collapsed */
         .capabilities-popup-bar.collapsed::after {
             transform: rotate(180deg);
         }
@@ -246,7 +246,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold text-dark code-font" href="#">
-                <img src="images/spiral_logo.png" alt="SPIRALONE" style="height:48px;" class="me-2">
+                <img src="spiral_logo.png" alt="SPIRALONE" style="height:48px;" class="me-2">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -301,8 +301,6 @@
                             <a href="https://github.com/najneen01" target="_blank" class="github-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
                             <a href="https://www.researchgate.net/profile/Najneen-Rejwana" target="_blank" class="researchgate-icon" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
                             <a href="https://linkedin.com/in/najneen-rejwana" target="_blank" class="linkedin-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://www.youtube.com/@najneenrejwana9450" target="_blank" class="youtube-icon" title="LinkedIn"><i class="fa-brands fa-youtube"></i></a>
-
                         </div>
                     </div>
                 </div>
@@ -313,14 +311,14 @@
     <main class="container my-5 py-4" id="domains">
         
         <div class="container mb-4 px-0">
-            <div class="capabilities-popup-bar collapsed" onclick="toggleDropUpPanel()">
+            <div class="capabilities-popup-bar" onclick="toggleDropUpPanel()">
                 <div class="popup-indicator code-font"><i class="fa-solid fa-bolt me-1"></i> Core Stack</div>
                 <h2 class="fw-bold text-dark mb-2">Analytical Capabilities</h2>
                 <p class="text-muted mb-0">High-throughput custom analytics mapping cellular mechanisms across diverse biological layers. (Click to Expand / Collapse Domains)</p>
             </div>
         </div>
 
-        <div id="dropupPanel" class="dropup-panel-wrapper collapsed-panel">
+        <div id="dropupPanel" class="dropup-panel-wrapper">
             <div class="dropup-inner-content">
                 <div class="row g-4 pt-2 pb-5">
                     <div class="col-md-6 col-lg-4">
@@ -328,11 +326,11 @@
                             <img src="images/genomics.jpeg" class="card-banner-img" alt="Genomics Research Domain">
                             <div class="card-body-content">
                                 <h4 class="card-title-custom">Genomics</h4>
-                                <p class="card-text-custom">Predictive in silico modeling, deep learning sequence analysis, and structural validation pipelines.</p>
+                                <p class="card-text-custom">WGS/WES processing, variant calling configurations, and structural variant curation architecture.</p>
                                 <div class="badge-container-custom">
-                                    <span class="badge-tech">Biomarker Discovery</span>
-                                    <span class="badge-tech">Predictive Modeling</span>
-                                    <span class="badge-tech">PyTorch</span>
+                                    <span class="badge-tech">GATK4</span>
+                                    <span class="badge-tech">Variant Annotation</span>
+                                    <span class="badge-tech">Somatic Curation</span>
                                 </div>
                                 <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                             </div>
@@ -427,7 +425,8 @@
         <div class="container">
             <div class="row g-4 justify-content-between pb-4 border-bottom border-secondary">
                 <div class="col-md-5">
-                    <img src="images/spiral_logo_transparent.png" alt="SPIRALONE" style="height:48px;" class="me-2 mb-3">
+                    <img src="img/spiral_logo_transparent.png"  style="height:48px;" class="me-2 mb-3">
+                      
                     <h4 class="fw-bold text-white code-font">SPIRALONE</h4>
                     <p class="text-white-50 small mt-3">Providing industry-grade analytical support for sophisticated multi-omics and computational disease modeling discovery pipelines.</p>
                     <p class="text-white-50 small mt-4"><i class="fa-solid fa-envelope me-2"></i> najneenrejwana13@gmail.com </p>
@@ -462,7 +461,6 @@
             const panel = document.getElementById('dropupPanel');
             const headerBar = document.querySelector('.capabilities-popup-bar');
             
-            // Toggles classes correctly on user click
             panel.classList.toggle('collapsed-panel');
             headerBar.classList.toggle('collapsed');
         }
