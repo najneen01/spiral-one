@@ -123,17 +123,17 @@
             user-select: none;
         }
         .capabilities-popup-bar::after {
-            content: '\f077';
+            content: '\f077'; /* Up chevron */
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute;
-            bottom: 20px;
-            right: 25px;
-            font-size: 0.9rem;
+            bottom: 35px;
+            right: 40px;
+            font-size: 1.1rem;
             color: #a0aec0;
             transition: transform 0.3s ease;
         }
-        /* Reverse caret indicator if collapsed */
+        /* Rotates chevron downward if collapsed */
         .capabilities-popup-bar.collapsed::after {
             transform: rotate(180deg);
         }
@@ -142,17 +142,17 @@
             top: 15px;
             right: 20px;
             font-size: 0.7rem;
-            color: #64dfdf;
+            color: #3a506b;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-weight: 700;
         }
 
-        /* Smooth CSS Drop-Up Panel Wrapper */
+        /* Smooth CSS Dropdown Panel Wrapper */
         .dropup-panel-wrapper {
             display: grid;
             grid-template-rows: 1fr;
-            transition: grid-template-rows 0.35s ease-out, opacity 0.25s ease;
+            transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
             opacity: 1;
         }
         .dropup-panel-wrapper.collapsed-panel {
@@ -301,6 +301,8 @@
                             <a href="https://github.com/najneen01" target="_blank" class="github-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
                             <a href="https://www.researchgate.net/profile/Najneen-Rejwana" target="_blank" class="researchgate-icon" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
                             <a href="https://linkedin.com/in/najneen-rejwana" target="_blank" class="linkedin-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.youtube.com/@najneenrejwana9450" target="_blank" class="youtube-icon" title="LinkedIn"><i class="fa-brands fa-youtube"></i></a>
+
                         </div>
                     </div>
                 </div>
@@ -311,14 +313,14 @@
     <main class="container my-5 py-4" id="domains">
         
         <div class="container mb-4 px-0">
-            <div class="capabilities-popup-bar" onclick="toggleDropUpPanel()">
+            <div class="capabilities-popup-bar collapsed" onclick="toggleDropUpPanel()">
                 <div class="popup-indicator code-font"><i class="fa-solid fa-bolt me-1"></i> Core Stack</div>
                 <h2 class="fw-bold text-dark mb-2">Analytical Capabilities</h2>
                 <p class="text-muted mb-0">High-throughput custom analytics mapping cellular mechanisms across diverse biological layers. (Click to Expand / Collapse Domains)</p>
             </div>
         </div>
 
-        <div id="dropupPanel" class="dropup-panel-wrapper">
+        <div id="dropupPanel" class="dropup-panel-wrapper collapsed-panel">
             <div class="dropup-inner-content">
                 <div class="row g-4 pt-2 pb-5">
                     <div class="col-md-6 col-lg-4">
@@ -460,6 +462,7 @@
             const panel = document.getElementById('dropupPanel');
             const headerBar = document.querySelector('.capabilities-popup-bar');
             
+            // Toggles classes correctly on user click
             panel.classList.toggle('collapsed-panel');
             headerBar.classList.toggle('collapsed');
         }
