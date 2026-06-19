@@ -87,9 +87,30 @@
             color: #4a5568;
             line-height: 1.5;
             max-width: 340px;
-            margin: 0 auto;
+            margin: 0 auto 12px auto;
         }
-        /* Dynamic "Popup-Style" Section Header Bar */
+        /* Professional Social Media Icon Bar */
+        .founder-socials {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 12px;
+        }
+        .founder-socials a {
+            font-size: 1.25rem;
+            color: #4a5568;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+        .founder-socials a:hover {
+            color: #1c2541;
+            transform: translateY(-2px);
+        }
+        .founder-socials a.gmail-icon:hover { color: #db4437; }
+        .founder-socials a.github-icon:hover { color: #24292e; }
+        .founder-socials a.researchgate-icon:hover { color: #00ccbb; }
+        .founder-socials a.linkedin-icon:hover { color: #0077b5; }
+
+        /* Drop-Up Trigger Header Style */
         .capabilities-popup-bar {
             position: relative;
             background: #ffffff;
@@ -98,12 +119,23 @@
             border-radius: 14px;
             padding: 35px 40px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-            transform: translateY(0);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            user-select: none;
         }
-        .capabilities-popup-bar:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        .capabilities-popup-bar::after {
+            content: '\f077';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            bottom: 20px;
+            right: 25px;
+            font-size: 0.9rem;
+            color: #a0aec0;
+            transition: transform 0.3s ease;
+        }
+        /* Reverse caret indicator if collapsed */
+        .capabilities-popup-bar.collapsed::after {
+            transform: rotate(180deg);
         }
         .popup-indicator {
             position: absolute;
@@ -115,6 +147,23 @@
             letter-spacing: 1.5px;
             font-weight: 700;
         }
+
+        /* Smooth CSS Drop-Up Panel Wrapper */
+        .dropup-panel-wrapper {
+            display: grid;
+            grid-template-rows: 1fr;
+            transition: grid-template-rows 0.35s ease-out, opacity 0.25s ease;
+            opacity: 1;
+        }
+        .dropup-panel-wrapper.collapsed-panel {
+            grid-template-rows: 0fr;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .dropup-inner-content {
+            overflow: hidden;
+        }
+
         /* Visual Layout Matching Cards */
         .card-custom {
             border: none;
@@ -205,9 +254,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link px-3" href="#domains">Research Domains</a></li>
-                    <li class="nav-item ms-2">
-                        <a class="btn btn-sm btn-dark text-white px-3" href="#contact">Collaborate</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Collaborate</a></li>
                 </ul>
             </div>
         </div>
@@ -244,11 +291,17 @@
                             <img src="images/najneen.jpeg" alt="Najneen Rejwana">
                         </div>
                         <h4 class="profile-name">Najneen Rejwana</h4>
-                        <p class="profile-credentials">
+                        <div class="profile-credentials">
                             (Founder) <br> M.Sc. (Genetics), ex-Scholar (ICCR),<br>
-                            ex-Fellow (UNOSSC-EMPOWER, ICGEB- Arturo Falaschi) <br>
-                            Contact: najneenrejwana13@gmail.com
-                        </p>
+                            ex-Fellow (UNOSSC-EMPOWER, ICGEB- Arturo Falaschi)
+                        </div>
+                        
+                        <div class="founder-socials">
+                            <a href="mailto:najneenrejwana13@gmail.com" class="gmail-icon" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="https://github.com/najneen01" target="_blank" class="github-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.researchgate.net/profile/Najneen-Rejwana" target="_blank" class="researchgate-icon" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+                            <a href="https://linkedin.com/in/najneen-rejwana" target="_blank" class="linkedin-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -256,107 +309,112 @@
     </section>
 
     <main class="container my-5 py-4" id="domains">
-        <div class="container mb-5 px-0">
-            <div class="capabilities-popup-bar">
-                <div class="popup-indicator code-font"><i class="fa-solid fa-bolt me-1"></i> Core Core</div>
+        
+        <div class="container mb-4 px-0">
+            <div class="capabilities-popup-bar" onclick="toggleDropUpPanel()">
+                <div class="popup-indicator code-font"><i class="fa-solid fa-bolt me-1"></i> Core Stack</div>
                 <h2 class="fw-bold text-dark mb-2">Analytical Capabilities</h2>
-                <p class="text-muted mb-0">High-throughput custom analytics mapping cellular mechanisms across diverse biological layers.</p>
+                <p class="text-muted mb-0">High-throughput custom analytics mapping cellular mechanisms across diverse biological layers. (Click to Expand / Collapse Domains)</p>
             </div>
         </div>
 
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-custom">
-                    <img src="images/genomics.jpeg" class="card-banner-img" alt="Genomics Research Domain">
-                    <div class="card-body-content">
-                        <h4 class="card-title-custom">Genomics</h4>
-                        <p class="card-text-custom">Predictive in silico modeling, deep learning sequence analysis, and structural validation pipelines.</p>
-                        <div class="badge-container-custom">
-                            <span class="badge-tech">Biomarker Discovery</span>
-                            <span class="badge-tech">Predictive Modeling</span>
-                            <span class="badge-tech">PyTorch</span>
+        <div id="dropupPanel" class="dropup-panel-wrapper">
+            <div class="dropup-inner-content">
+                <div class="row g-4 pt-2 pb-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/genomics.jpeg" class="card-banner-img" alt="Genomics Research Domain">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">Genomics</h4>
+                                <p class="card-text-custom">Predictive in silico modeling, deep learning sequence analysis, and structural validation pipelines.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">Biomarker Discovery</span>
+                                    <span class="badge-tech">Predictive Modeling</span>
+                                    <span class="badge-tech">PyTorch</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                            </div>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
-                </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-custom">
-                    <img src="images/transcriptom.jpeg" class="card-banner-img" alt="Transcriptomics Research Domain">
-                    <div class="card-body-content">
-                        <h4 class="card-title-custom">Transcriptomics</h4>
-                        <p class="card-text-custom">Bulk and single-cell expression profiles mapping complex cellular heterogeneities.</p>
-                        <div class="badge-container-custom">
-                            <span class="badge-tech">Seurat v5</span>
-                            <span class="badge-tech">Spatial Transcriptomics</span>
-                            <span class="badge-tech">DESeq2</span>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/transcriptom.jpeg" class="card-banner-img" alt="Transcriptomics Research Domain">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">Transcriptomics</h4>
+                                <p class="card-text-custom">Bulk and single-cell expression profiles mapping complex cellular heterogeneities.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">Seurat v5</span>
+                                    <span class="badge-tech">Spatial Transcriptomics</span>
+                                    <span class="badge-tech">DESeq2</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                            </div>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
-                </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-custom">
-                    <img src="images/ML.jpeg" class="card-banner-img" alt="ML/AI Pipeline Architectures">
-                    <div class="card-body-content">
-                        <h4 class="card-title-custom">ML / AI Architecture</h4>
-                        <p class="card-text-custom">Predictive in silico modeling, deep learning sequence analysis, and structural validation pipelines.</p>
-                        <div class="badge-container-custom">
-                            <span class="badge-tech">Biomarker Discovery</span>
-                            <span class="badge-tech">Predictive Modeling</span>
-                            <span class="badge-tech">PyTorch</span>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/ML.jpeg" class="card-banner-img" alt="ML/AI Pipeline Architectures">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">ML / AI Architecture</h4>
+                                <p class="card-text-custom">Predictive in silico modeling, deep learning sequence analysis, and structural validation pipelines.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">Biomarker Discovery</span>
+                                    <span class="badge-tech">Predictive Modeling</span>
+                                    <span class="badge-tech">PyTorch</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                            </div>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
-                </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-custom">
-                    <img src="images/proteomics.jpeg" class="card-banner-img" alt="Proteomics Structural Data Mapping">
-                    <div class="card-body-content">
-                        <h4 class="card-title-custom">Proteomics</h4>
-                        <p class="card-text-custom">Mapping expression dynamics, structural changes, and critical protein-protein interaction networks.</p>
-                        <div class="badge-container-custom">
-                            <span class="badge-tech">Mass Spec Processing</span>
-                            <span class="badge-tech">PPI Networks</span>
-                            <span class="badge-tech">PTM Mapping</span>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/proteomics.jpeg" class="card-banner-img" alt="Proteomics Structural Data Mapping">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">Proteomics</h4>
+                                <p class="card-text-custom">Mapping expression dynamics, structural changes, and critical protein-protein interaction networks.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">Mass Spec Processing</span>
+                                    <span class="badge-tech">PPI Networks</span>
+                                    <span class="badge-tech">PTM Mapping</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                            </div>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
-                </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-custom">
-                    <img src="images/biostat.jpeg" class="card-banner-img" alt="Biostatistical Pipelines and Survival Models">
-                    <div class="card-body-content">
-                        <h4 class="card-title-custom">Biostatistics</h4>
-                        <p class="card-text-custom">Rigorous mathematical validation workflows ensuring data integration accuracy and survival significance.</p>
-                        <div class="badge-container-custom">
-                            <span class="badge-tech">Dimensionality Reduction</span>
-                            <span class="badge-tech">Survival Analysis</span>
-                            <span class="badge-tech">Multi-Omics Fusion</span>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/biostat.jpeg" class="card-banner-img" alt="Biostatistical Pipelines and Survival Models">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">Biostatistics</h4>
+                                <p class="card-text-custom">Rigorous mathematical validation workflows ensuring data integration accuracy and survival significance.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">Dimensionality Reduction</span>
+                                    <span class="badge-tech">Survival Analysis</span>
+                                    <span class="badge-tech">Multi-Omics Fusion</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                            </div>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
-                </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-custom">
-                    <img src="images/molecular.jpeg" class="card-banner-img" alt="Translational Molecular Assays">
-                    <div class="card-body-content">
-                        <h4 class="card-title-custom">Molecular Biology</h4>
-                        <p class="card-text-custom">Mechanistic translational strategies bridging dry-lab discovery loops to actionable wet-lab models.</p>
-                        <div class="badge-container-custom">
-                            <span class="badge-tech">Target Validation</span>
-                            <span class="badge-tech">Assay Architecture</span>
-                            <span class="badge-tech">In Silico Tools</span>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/molecular.jpeg" class="card-banner-img" alt="Translational Molecular Assays">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">Molecular Biology</h4>
+                                <p class="card-text-custom">Mechanistic translational strategies bridging dry-lab discovery loops to actionable wet-lab models.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">Target Validation</span>
+                                    <span class="badge-tech">Assay Architecture</span>
+                                    <span class="badge-tech">In Silico Tools</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                            </div>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
@@ -365,11 +423,9 @@
 
     <footer class="bg-dark text-light py-5 mt-5" id="contact">
         <div class="container">
-            <div class="row g-4 justify-content-between">
+            <div class="row g-4 justify-content-between pb-4 border-bottom border-secondary">
                 <div class="col-md-5">
-                                   
-                    <img src="images/spiral_logo_transparent.png" alt="SPIRALONE" style="height:48px;" class="me-2">
-
+                    <img src="images/spiral_logo_transparent.png" alt="SPIRALONE" style="height:48px;" class="me-2 mb-3">
                     <h4 class="fw-bold text-white code-font">SPIRALONE</h4>
                     <p class="text-white-50 small mt-3">Providing industry-grade analytical support for sophisticated multi-omics and computational disease modeling discovery pipelines.</p>
                     <p class="text-white-50 small mt-4"><i class="fa-solid fa-envelope me-2"></i> najneenrejwana13@gmail.com </p>
@@ -389,9 +445,24 @@
                     </form>
                 </div>
             </div>
+            
+            <div class="row pt-4">
+                <div class="col text-center text-white-50 small">
+                    <p class="mb-0">&copy; 2026 SPIRALONE. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleDropUpPanel() {
+            const panel = document.getElementById('dropupPanel');
+            const headerBar = document.querySelector('.capabilities-popup-bar');
+            
+            panel.classList.toggle('collapsed-panel');
+            headerBar.classList.toggle('collapsed');
+        }
+    </script>
 </body>
 </html>
