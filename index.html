@@ -8,13 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="family">
-
-
-
-
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <style>
         body {
@@ -29,7 +23,7 @@
         .hero-section {
             background: linear-gradient(135deg, #0b132b, #1c2541, #3a506b);
             color: white;
-            padding: 120px 0 100px 0;
+            padding: 100px 0;
             position: relative;
             overflow: hidden;
         }
@@ -40,7 +34,63 @@
             left: 0;
             right: 0;
             height: 50px;
-            background: linear-gradient(to rgba(247,250,252,0), #f7fafc);
+            background: linear-gradient(to top, #f7fafc, rgba(247,250,252,0));
+        }
+        /* Quote & Profile Section Spacing */
+        .quote-wrapper {
+            padding: 100px 0;
+            background-color: #f7fafc;
+        }
+        .quote-text {
+            font-size: 1.85rem;
+            color: #2d3748;
+            font-weight: 500;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        /* Refined Square Profile Styling */
+        .profile-container {
+            text-align: center;
+        }
+        .profile-img-square {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 12px; /* Smooth professional square edges */
+            padding: 4px;
+            background: linear-gradient(135deg, #64dfdf, #3a506b);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+            margin: 0 auto 20px auto;
+            transition: transform 0.3s ease;
+        }
+        .profile-img-square:hover {
+            transform: scale(1.03);
+        }
+        .profile-img-square img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid white;
+        }
+        .profile-name {
+            font-weight: 700;
+            color: #1c2541;
+            margin-bottom: 6px;
+        }
+        .profile-credentials {
+            font-size: 0.88rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+        /* Highlighted Capabilities Section Header */
+        .capabilities-highlight-box {
+            background: linear-gradient(180deg, #eef2f7 0%, #f7fafc 100%);
+            border-left: 5px solid #3a506b;
+            border-radius: 8px;
+            padding: 40px;
         }
         /* Sleek Corporate Cards */
         .card-custom {
@@ -107,36 +157,17 @@
 </head>
 <body>
 
-
-
-
-
-<div class="bg-white rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.05)] border border-gray-100 p-8 md:p-16 relative">
-         
-
-            
-
-                   
-
-
-
-
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold text-dark code-font" href="#">
-                <img src="images/spiral_logo.png" alt="Logo" style="height:35px;" class="me-2">
+                <img src="images/spiral_logo.png" alt="SPIRALONE" style="height:35px;" class="me-2">
             </a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="navbar-collapse collapse" id="navbarNav" style="">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link px-3" href="#domains">Research Domains</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#infrastructure">Infrastructure</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#portfolio">Assets &amp; Papers</a></li>
                     <li class="nav-item ms-2">
                         <a class="btn btn-sm btn-dark text-white px-3" href="#contact">Collaborate</a>
                     </li>
@@ -145,17 +176,11 @@
         </div>
     </nav>
 
-
-
-
-
-
-
     <header class="hero-section d-flex align-items-center">
         <div class="container text-center text-lg-start">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <span class="badge bg-soft-primary text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(255,255,255,0.1); color: #64dfdf;">Translational Data Science</span>
+                    <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(255,255,255,0.1); color: #64dfdf;">Translational Data Science</span>
                     <h1 class="display-4 fw-bold mb-3">Bridging Wet-Lab Insight with Multi-Omics Architecture</h1>
                     <p class="lead text-white-50 mb-4">Scalable, end-to-end computational frameworks providing advanced inference, single-cell analysis, and structured machine learning pipelines for therapeutic discovery.</p>
                     <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
@@ -167,37 +192,38 @@
         </div>
     </header>
 
-
-
-<div class="relative z-10 flex flex-col items-center text-center">
-                <blockquote class="text-2xl md:text-3xl text-gray-800 font-medium leading-tight md:leading-snug mb-12 italic text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-600">
-                    "Data is the bridge between biological complexity and life-saving discovery. We decode the sequence of progress."
-                </blockquote>
-
-                <div class="flex items-center gap-6">
-                    <!-- Photo Placeholder with animated border -->
-                    <div class="relative w-24 h-24 rounded-full p-1 bg-gradient-to-r from-blue-500 to-indigo-600 shadow-xl">
-                        <div class="w-full h-full bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-white">
-                            <img src="logo.jpg" alt="Najneen Rejwana" class="w-full h-full object-cover">
+    <section class="quote-wrapper">
+        <div class="container">
+            <div class="row justify-content-center align-items-center g-5">
+                <div class="col-lg-7 text-center text-lg-start border-end-lg">
+                    <blockquote class="quote-text mb-0">
+                        "Data is the bridge between biological complexity and life-saving discovery. We decode the sequence of progress."
+                    </blockquote>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="profile-container">
+                        <div class="profile-img-square">
+                            <img src="logo.jpg" alt="Najneen Rejwana">
                         </div>
+                        <h4 class="profile-name">Najneen Rejwana</h4>
+                        <p class="profile-credentials">
+                          founder <br>  M.Sc. (Genetics), ex-Scholar (ICCR),<br>
+                            ex-Fellow (UNOSSC-EMPOWER, ICGEB- Arturo Falaschi)
+                        </p>
                     </div>
-
-
-
-
-
-
-
-
-
-
+                </div>
+            </div>
+        </div>
+    </section>
 
     <main class="container my-5 py-4" id="domains">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Analytical Capabilities</h2>
-            <p class="text-muted max-w-2xl mx-auto">High-throughput custom analytics mapping cellular mechanisms across diverse biological layers.</p>
+        <div class="container mb-5 px-0">
+            <div class="capabilities-highlight-box">
+                <h2 class="fw-bold text-dark mb-2">Analytical Capabilities</h2>
+                <p class="text-muted mb-0">High-throughput custom analytics mapping cellular mechanisms across diverse biological layers.</p>
+            </div>
         </div>
-
 
         <div class="row g-4">
             <div class="col-md-6 col-lg-4">
@@ -209,8 +235,7 @@
                         <span class="badge-tech">Seurat v5</span>
                         <span class="badge-tech">Spatial Transcriptomics</span>
                         <span class="badge-tech">DESeq2</span>
-
-<a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
@@ -224,14 +249,12 @@
                         <span class="badge-tech">Mass Spec Processing</span>
                         <span class="badge-tech">PPI Networks</span>
                         <span class="badge-tech">PTM Mapping</span>
-
-<a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
 
-
-    <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="card card-custom p-4">
                     <div class="icon-box"><i class="fa-solid fa-dna"></i></div>
                     <h4 class="fw-bold mb-2">Genomics</h4>
@@ -240,19 +263,10 @@
                         <span class="badge-tech">Biomarker Discovery</span>
                         <span class="badge-tech">Predictive Modeling</span>
                         <span class="badge-tech">PyTorch</span>
-
-<a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
 
             <div class="col-md-6 col-lg-4">
                 <div class="card card-custom p-4">
@@ -263,12 +277,10 @@
                         <span class="badge-tech">Biomarker Discovery</span>
                         <span class="badge-tech">Predictive Modeling</span>
                         <span class="badge-tech">PyTorch</span>
-
-<a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
-
 
             <div class="col-md-6 col-lg-4">
                 <div class="card card-custom p-4">
@@ -279,8 +291,7 @@
                         <span class="badge-tech">Dimensionality Reduction</span>
                         <span class="badge-tech">Survival Analysis</span>
                         <span class="badge-tech">Multi-Omics Fusion</span>
-
-<a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
@@ -294,16 +305,12 @@
                         <span class="badge-tech">Target Validation</span>
                         <span class="badge-tech">Assay Architecture</span>
                         <span class="badge-tech">In Silico Tools</span>
-
-<a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
-
+                        <a href="https://www.youtube.com/watch?v=transcriptomics_example" target="_blank" class="btn btn-sm btn-outline-dark mt-3 w-100"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-
 
     <footer class="bg-dark text-light py-5 mt-5" id="contact">
         <div class="container">
@@ -314,21 +321,13 @@
                     <p class="text-white-50 small mt-4"><i class="fa-solid fa-envelope me-2"></i> najneenrejwana13@gmail.com </p>
                 </div>
 
-
                 <div class="col-md-6">
                     <h5 class="text-white mb-3">Initiate a Project / Collaboration</h5>
-                    <form action="https://formspree.io/f/meewdzka " method="POST">
+                    <form action="https://formspree.io/f/meewdzka" method="POST">
                         <div class="row g-2 mb-3">
                             <div class="col"><input type="text" name="name" class="form-control bg-secondary text-white border-0" placeholder="Your Name" required></div>
                             <div class="col"><input type="email" name="email" class="form-control bg-secondary text-white border-0" placeholder="Email Address" required></div>
                         </div>
-
-
-
-
-
-
-
                         <div class="mb-3">
                             <textarea name="message" class="form-control bg-secondary text-white border-0" rows="3" placeholder="Describe your data or research objectives..." required></textarea>
                         </div>
@@ -342,5 +341,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
