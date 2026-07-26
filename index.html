@@ -22,6 +22,7 @@
             font-family: 'Inter', sans-serif;
             color: #2d3748;
             background-color: #f7fafc;
+            scroll-behavior: smooth;
         }
         .code-font {
             font-family: 'JetBrains Mono', monospace;
@@ -131,6 +132,11 @@
             display: flex;
             flex-direction: column;
             border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .standard-media-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.09);
         }
         .card-media-header {
             position: relative;
@@ -387,92 +393,12 @@
         </div>
     </section>
 
-    <section class="media-spotlight-section" id="media">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-8">
-                    <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(58, 80, 107, 0.1); color: #3a506b;">Global Recognition & Spotlight</span>
-                    <h2 class="fw-bold text-dark mb-2">Media & Spotlight Features</h2>
-                    <p class="text-muted">Featured documentaries, international fellowships, and official platform announcements.</p>
-                </div>
-            </div>
-
-            <div class="row g-4 justify-content-center mb-4">
-                <div class="col-lg-6">
-                    <div class="standard-media-card">
-                        <div class="card-media-header">
-                            <iframe src="https://www.youtube-nocookie.com/embed/Qgyj5Th4sMo" title="UNOSSC EMPOWER Fellowship" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-media-body">
-                            <div>
-                                <span class="badge bg-secondary text-white mb-2 code-font">Featured Broadcast</span>
-                                <h4 class="fw-bold text-dark mb-2">UNOSSC EMPOWER Fellowship</h4>
-                                <p class="text-muted small mb-0">Documentary tracking the transition from bioinformatics research in Bangladesh to advanced molecular modeling at ICGEB.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="standard-media-card">
-                        <div class="card-media-header">
-                            <img src="https://www.icgeb.org/wp-content/uploads/2023/03/Empowering-Women-Scientists-Global-South.jpg" alt="Empowering Women Scientists from the Global South">
-                        </div>
-                        <div class="card-media-body">
-                            <div>
-                                <span class="badge bg-secondary text-white mb-2 code-font">ICGEB Feature</span>
-                                <h4 class="fw-bold text-dark mb-2">Empowering Women Scientists</h4>
-                                <p class="text-muted small mb-3">Official ICGEB feature article detailing scientific empowerment and international research excellence.</p>
-                            </div>
-                            <div>
-                                <a href="https://www.icgeb.org/empowering-women-scientists-from-the-global-south/" target="_blank" class="btn btn-sm btn-dark">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="twitter-scroller-row">
-                <div class="twitter-track">
-                    <div class="twitter-card-wrapper">
-                        <blockquote class="twitter-tweet">
-                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
-                        </blockquote>
-                    </div>
-                    <div class="twitter-card-wrapper">
-                        <blockquote class="twitter-tweet">
-                            <a href="https://x.com/UNOSSC/status/1633458803134930944"></a>
-                        </blockquote>
-                    </div>
-                 
-                    
-                    <div class="twitter-card-wrapper">
-                        <blockquote class="twitter-tweet">
-                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
-                        </blockquote>
-                    </div>
-                    <div class="twitter-card-wrapper">
-                        <blockquote class="twitter-tweet">
-                            <a href="https://x.com/UNOSSC/status/1633458803134930944"></a>
-                        </blockquote>
-                    </div>
-                    <div class="twitter-card-wrapper">
-                        <blockquote class="twitter-tweet">
-                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <main class="container my-5 py-4" id="domains">
         
         <div class="container mb-4 px-0">
             <div class="capabilities-popup-bar" onclick="toggleDropUpPanel()">
                 <div class="popup-indicator code-font"><i class="fa-solid fa-bolt me-1"></i> Core Stack</div>
-                <h2 class="fw-bold text-dark mb-2">Analytical Capabilities</h2>
+                <h2 class="fw-bold text-dark mb-2">Research Domains</h2>
                 <p class="text-muted mb-0">High-throughput custom analytics mapping cellular mechanisms across diverse biological layers. (Click to Expand / Collapse Domains)</p>
             </div>
         </div>
@@ -605,6 +531,90 @@
             </div>
         </div>
     </main>
+
+    <section class="media-spotlight-section" id="media">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(58, 80, 107, 0.1); color: #3a506b;">Global Recognition & Spotlight</span>
+                    <h2 class="fw-bold text-dark mb-2">Media & Spotlight Features</h2>
+                    <p class="text-muted">Featured documentaries, international fellowships, and official platform announcements.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center mb-4">
+                <div class="col-lg-6">
+                    <div class="standard-media-card">
+                        <div class="card-media-header">
+                            <iframe src="https://www.youtube-nocookie.com/embed/Qgyj5Th4sMo" title="UNOSSC EMPOWER Fellowship" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-media-body">
+                            <div>
+                                <span class="badge bg-secondary text-white mb-2 code-font">Featured Broadcast</span>
+                                <h4 class="fw-bold text-dark mb-2">UNOSSC EMPOWER Fellowship</h4>
+                                <p class="text-muted small mb-0">Documentary tracking the transition from bioinformatics research in Bangladesh to advanced molecular modeling at ICGEB.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="standard-media-card">
+                        <div class="card-media-header">
+                            <img src="images/icgeb.jpeg" alt="ICGEB Women Scientists Feature">
+                        </div>
+                        <div class="card-media-body">
+                            <div>
+                                <span class="badge bg-secondary text-white mb-2 code-font">ICGEB Feature</span>
+                                <h4 class="fw-bold text-dark mb-2">Empowering Women Scientists</h4>
+                                <p class="text-muted small mb-3">Official ICGEB feature article detailing scientific empowerment and international research excellence.</p>
+                            </div>
+                            <div>
+                                <a href="https://www.icgeb.org/empowering-women-scientists-from-the-global-south/" target="_blank" class="btn btn-sm btn-dark">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="twitter-scroller-row">
+                <div class="twitter-track">
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
+                        </blockquote>
+                    </div>
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1633458803134930944"></a>
+                        </blockquote>
+                    </div>
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
+                        </blockquote>
+                    </div>
+                    
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
+                        </blockquote>
+                    </div>
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1633458803134930944"></a>
+                        </blockquote>
+                    </div>
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <footer class="bg-dark text-light py-5 mt-5" id="contact">
         <div class="container">
