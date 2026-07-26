@@ -114,7 +114,7 @@
         .founder-socials a.researchgate-icon:hover { color: #00ccbb; }
         .founder-socials a.linkedin-icon:hover { color: #0077b5; }
 
-        /* NEW MEDIA SECTION STYLES */
+        /* MEDIA SECTION STYLES */
         .media-spotlight-section {
             background-color: #f1f5f9;
             padding: 70px 0;
@@ -135,7 +135,7 @@
         .card-media-header {
             position: relative;
             width: 100%;
-            height: 260px;
+            height: 240px;
             background: #000;
         }
         .card-media-header iframe,
@@ -146,7 +146,7 @@
             border: 0;
         }
         .card-media-body {
-            padding: 30px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -156,28 +156,28 @@
         /* Auto-Scrolling Twitter Row (Row 2) */
         .twitter-scroller-row {
             overflow: hidden;
-            padding: 20px 0; /* Padding for shadow */
+            padding: 20px 0;
             margin-top: 40px;
             mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
         }
         .twitter-track {
             display: flex;
             gap: 25px;
-            width: calc(380px * 6); /* Width of 6 cards (3 real + 3 cloned) */
-            animation: scrollLeft 40s linear infinite; /* Adjust speed here */
+            width: calc(380px * 6); /* 3 cards + 3 cloned duplicates for seamless looping */
+            animation: scrollLeft 35s linear infinite;
         }
         .twitter-track:hover {
             animation-play-state: paused;
         }
         .twitter-card-wrapper {
-            flex: 0 0 355px; /* Fixed width for each tweet card */
+            flex: 0 0 355px;
             background: #ffffff;
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.05);
             padding: 10px;
             border: 1px solid #edf2f7;
         }
-        /* Need to ensure the blockquote fits internally */
         .twitter-card-wrapper .twitter-tweet {
             margin: 0 !important; 
             width: 100% !important;
@@ -185,7 +185,7 @@
 
         @keyframes scrollLeft {
             0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-380px * 3)); } /* Scroll exactly 3 cards */
+            100% { transform: translateX(calc(-380px * 3)); }
         }
 
         /* Dropdown Trigger Header Style */
@@ -356,3 +356,301 @@
 
     <section class="quote-wrapper">
         <div class="container">
+            <div class="row justify-content-center align-items-center g-5">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <blockquote class="quote-text mb-0">
+                        "Data is the bridge between biological complexity and life-saving discovery. We decode the sequence of progress."
+                    </blockquote>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="profile-container">
+                        <div class="profile-img-square">
+                            <img src="images/najneen.jpeg" alt="Najneen Rejwana">
+                        </div>
+                        <h4 class="profile-name">Najneen Rejwana</h4>
+                        <div class="profile-credentials">
+                            [Founder] <br> M.Sc. (Genetics), ex-Scholar (ICCR),<br>
+                            ex-Fellow (UNOSSC-EMPOWER, ICGEB- Arturo Falaschi)
+                        </div>
+                        
+                        <div class="founder-socials">
+                            <a href="mailto:najneenrejwana13@gmail.com" class="gmail-icon" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="https://github.com/najneen01" target="_blank" class="github-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.researchgate.net/profile/Najneen-Rejwana" target="_blank" class="researchgate-icon" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+                            <a href="https://linkedin.com/in/najneen-rejwana" target="_blank" class="linkedin-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.youtube.com/@najneenrejwana9450" target="_blank" class="linkedin-icon" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="media-spotlight-section" id="media">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(58, 80, 107, 0.1); color: #3a506b;">Global Recognition & Spotlight</span>
+                    <h2 class="fw-bold text-dark mb-2">Media & Spotlight Features</h2>
+                    <p class="text-muted">Featured documentaries, international fellowships, and official platform announcements.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center mb-4">
+                <div class="col-lg-6">
+                    <div class="standard-media-card">
+                        <div class="card-media-header">
+                            <iframe src="https://www.youtube-nocookie.com/embed/Qgyj5Th4sMo" title="UNOSSC EMPOWER Fellowship" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-media-body">
+                            <div>
+                                <span class="badge bg-secondary text-white mb-2 code-font">Featured Broadcast</span>
+                                <h4 class="fw-bold text-dark mb-2">UNOSSC EMPOWER Fellowship</h4>
+                                <p class="text-muted small mb-0">Documentary tracking the transition from bioinformatics research in Bangladesh to advanced molecular modeling at ICGEB.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="standard-media-card">
+                        <div class="card-media-header">
+                            <img src="https://www.icgeb.org/wp-content/uploads/2023/03/Empowering-Women-Scientists-Global-South.jpg" alt="Empowering Women Scientists from the Global South">
+                        </div>
+                        <div class="card-media-body">
+                            <div>
+                                <span class="badge bg-secondary text-white mb-2 code-font">ICGEB Feature</span>
+                                <h4 class="fw-bold text-dark mb-2">Empowering Women Scientists</h4>
+                                <p class="text-muted small mb-3">Official ICGEB feature article detailing scientific empowerment and international research excellence.</p>
+                            </div>
+                            <div>
+                                <a href="https://www.icgeb.org/empowering-women-scientists-from-the-global-south/" target="_blank" class="btn btn-sm btn-dark">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="twitter-scroller-row">
+                <div class="twitter-track">
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
+                        </blockquote>
+                    </div>
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1633458803134930944"></a>
+                        </blockquote>
+                    </div>
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
+                        </blockquote>
+                    </div>
+                    
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
+                        </blockquote>
+                    </div>
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1633458803134930944"></a>
+                        </blockquote>
+                    </div>
+                    <div class="twitter-card-wrapper">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <main class="container my-5 py-4" id="domains">
+        
+        <div class="container mb-4 px-0">
+            <div class="capabilities-popup-bar" onclick="toggleDropUpPanel()">
+                <div class="popup-indicator code-font"><i class="fa-solid fa-bolt me-1"></i> Core Stack</div>
+                <h2 class="fw-bold text-dark mb-2">Analytical Capabilities</h2>
+                <p class="text-muted mb-0">High-throughput custom analytics mapping cellular mechanisms across diverse biological layers. (Click to Expand / Collapse Domains)</p>
+            </div>
+        </div>
+
+        <div id="dropupPanel" class="dropup-panel-wrapper">
+            <div class="dropup-inner-content">
+                <div class="row g-4 pt-2 pb-5">
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/genomics.jpeg" class="card-banner-img" alt="Genomics Research Domain">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">Genomics</h4>
+                                <p class="card-text-custom">WGS/WES processing, variant calling configurations, and structural variant curation architecture.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">GATK4</span>
+                                    <span class="badge-tech">Variant Annotation</span>
+                                    <span class="badge-tech">Somatic Curation</span>
+                                </div>
+                                <div class="d-grid gap-2 w-100 mt-2">
+                                    <a href="notes/genomics-notes.html" class="btn btn-sm btn-dark">
+                                        <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/transcriptom.jpeg" class="card-banner-img" alt="Transcriptomics Research Domain">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">Transcriptomics</h4>
+                                <p class="card-text-custom">Bulk and single-cell expression profiles mapping complex cellular heterogeneities.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">Seurat v5</span>
+                                    <span class="badge-tech">Spatial Transcriptomics</span>
+                                    <span class="badge-tech">DESeq2</span>
+                                </div>
+                                <div class="d-grid gap-2 w-100 mt-2">
+                                    <a href="notes/transcriptom-notes.html" class="btn btn-sm btn-dark">
+                                        <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/ML.jpeg" class="card-banner-img" alt="ML/AI Pipeline Architectures">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">AI / ML Architecture</h4>
+                                <p class="card-text-custom">Predictive in silico modeling, deep learning sequence analysis, and structural validation pipelines.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">Biomarker Discovery</span>
+                                    <span class="badge-tech">Predictive Modeling</span>
+                                    <span class="badge-tech">PyTorch</span>
+                                </div>
+                                <div class="d-grid gap-2 w-100 mt-2">
+                                    <a href="notes/AI-notes.html" class="btn btn-sm btn-dark">
+                                        <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/proteomics.jpeg" class="card-banner-img" alt="Proteomics Structural Data Mapping">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">Structural Biology & Structural Proteomics</h4>
+                                <p class="card-text-custom">Mapping expression dynamics, structural changes, and critical protein-protein interaction networks.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">Mass Spec Processing</span>
+                                    <span class="badge-tech">PPI Networks</span>
+                                    <span class="badge-tech">PTM Mapping</span>
+                                </div>
+                                <div class="d-grid gap-2 w-100 mt-2">
+                                    <a href="notes/proteomics-notes.html" class="btn btn-sm btn-dark">
+                                        <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/biostat.jpeg" class="card-banner-img" alt="Biostatistical Pipelines and Survival Models">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">Biostatistics</h4>
+                                <p class="card-text-custom">Rigorous mathematical validation workflows ensuring data integration accuracy and survival significance.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">Dimensionality Reduction</span>
+                                    <span class="badge-tech">Survival Analysis</span>
+                                    <span class="badge-tech">Multi-Omics Fusion</span>
+                                </div>
+                                <div class="d-grid gap-2 w-100 mt-2">
+                                    <a href="notes/biostat-notes.html" class="btn btn-sm btn-dark">
+                                        <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-custom">
+                            <img src="images/molecular.jpeg" class="card-banner-img" alt="Translational Molecular Assays">
+                            <div class="card-body-content">
+                                <h4 class="card-title-custom">Molecular Biology</h4>
+                                <p class="card-text-custom">Mechanistic translational strategies bridging dry-lab discovery loops to actionable wet-lab models.</p>
+                                <div class="badge-container-custom">
+                                    <span class="badge-tech">Target Validation</span>
+                                    <span class="badge-tech">Assay Architecture</span>
+                                    <span class="badge-tech">In Silico Tools</span>
+                                </div>
+                                <div class="d-grid gap-2 w-100 mt-2">
+                                    <a href="notes/molecular-notes.html" class="btn btn-sm btn-dark">
+                                        <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-5 mt-5" id="contact">
+        <div class="container">
+            <div class="row g-4 justify-content-between pb-4 border-bottom border-secondary">
+                <div class="col-md-5">
+                    <h4 class="fw-bold text-white code-font">SPIRAL ONE</h4>
+                    <p class="text-white-50 small mt-3">Providing industry-grade analytical support for sophisticated multi-omics and computational disease modeling discovery pipelines.</p>
+                </div>
+
+                <div class="col-md-6">
+                    <h5 class="text-white mb-3">Initiate a Project / Collaboration</h5>
+                    <form action="https://formspree.io/f/meewdzka" method="POST">
+                        <div class="row g-2 mb-3">
+                            <div class="col"><input type="text" name="name" class="form-control bg-secondary text-white border-0" placeholder="Your Name" required></div>
+                            <div class="col"><input type="email" name="email" class="form-control bg-secondary text-white border-0" placeholder="Email Address" required></div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control bg-secondary text-white border-0" rows="3" placeholder="Describe your data or research objectives..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-premium w-100">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="row pt-4">
+                <div class="col text-center text-white-50 small">
+                    <p class="mb-0">&copy; 2026 SPIRALONE. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+        function toggleDropUpPanel() {
+            const panel = document.getElementById('dropupPanel');
+            const headerBar = document.querySelector('.capabilities-popup-bar');
+            
+            panel.classList.toggle('collapsed-panel');
+            headerBar.classList.toggle('collapsed');
+        }
+    </script>
+</body>
+</html>
