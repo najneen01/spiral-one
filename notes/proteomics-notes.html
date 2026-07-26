@@ -43,7 +43,7 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
         }
         .card-body-content {
-            padding: 28px;
+            padding: 24px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -58,44 +58,44 @@
             padding: 4px 10px;
             border-radius: 6px;
             display: inline-block;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
         .blog-title {
             font-family: 'Lora', serif;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: #0f172a;
-            margin-bottom: 12px;
-            line-height: 1.4;
+            margin-bottom: 10px;
+            line-height: 1.35;
         }
         .blog-excerpt {
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             color: #64748b;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            line-height: 1.55;
+            margin-bottom: 16px;
         }
         .blog-content-body {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #334155;
-            line-height: 1.7;
+            line-height: 1.6;
             border-top: 1px dashed #e2e8f0;
-            padding-top: 16px;
-            margin-top: 10px;
+            padding-top: 14px;
+            margin-top: 8px;
         }
         .btn-toggle-blog {
             background: transparent;
             color: #0f172a;
             border: 1px solid #cbd5e1;
             font-weight: 600;
-            font-size: 0.85rem;
-            padding: 8px 16px;
+            font-size: 0.8rem;
+            padding: 7px 14px;
             border-radius: 6px;
             margin-top: auto;
             transition: all 0.2s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
         }
         .btn-toggle-blog:hover {
             background: #0f172a;
@@ -119,28 +119,28 @@
 
     <header class="hero-section">
         <div class="container">
-            <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(255,255,255,0.1); color: #64dfdf;">Multi-Domain Research Feed</span>
-            <h1 class="display-5 fw-bold mb-3">Cross-Disciplinary Scientific Insights & Frameworks</h1>
-            <p class="lead text-white-50 mx-auto" style="max-width: 650px;">Explore structured notes, modular deep dives, and analytical frameworks across four core scientific domains.</p>
+            <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(255,255,255,0.1); color: #64dfdf;">Curated Research Feed</span>
+            <h1 class="display-5 fw-bold mb-3">Scientific Insights & Modular Topics</h1>
+            <p class="lead text-white-50 mx-auto" style="max-width: 650px;">Explore our comprehensive catalog of 8 structured research topics and analytical frameworks.</p>
         </div>
     </header>
 
     <main class="container my-5 py-3">
-        <div class="row g-4">
+        <div class="row g-4 mb-4">
             
             <div class="col-md-6 col-lg-3">
                 <div class="card card-custom">
                     <div class="card-body-content">
                         <div>
-                            <span class="topic-sequence-badge code-font">Domain 01</span>
-                            <h3 class="blog-title">Structural Biology & Proteomics</h3>
-                            <p class="blog-excerpt">Physics-aware deep learning and mass spectrometry PPI network mapping for precision drug discovery.</p>
+                            <span class="topic-sequence-badge code-font">Topic 01</span>
+                            <h3 class="blog-title">Physics-Aware Deep Learning</h3>
+                            <p class="blog-excerpt">Integrating thermodynamic constraints with equivariant graph networks to resolve 3D structural inaccuracies.</p>
                         </div>
                         
                         <div class="collapse" id="blogPost1">
                             <div class="blog-content-body">
-                                <p><strong>Key Concept:</strong> Integrating thermodynamic constraints with equivariant graph networks to resolve 3D structural inaccuracies.</p>
-                                <p class="mb-0">By incorporating strict vector invariant layers and electrostatic penalty metrics into PyTorch architectures, models maintain atomic coordinate precision across complex protein folds.</p>
+                                <p><strong>Key Concept:</strong> Standard data-driven models frequently fail physical validity checks when rotating molecules in space.</p>
+                                <p class="mb-0">By incorporating strict vector invariant layers and electrostatic penalty metrics into architectures, models maintain atomic coordinate precision.</p>
                             </div>
                         </div>
 
@@ -155,15 +155,15 @@
                 <div class="card card-custom">
                     <div class="card-body-content">
                         <div>
-                            <span class="topic-sequence-badge code-font">Domain 02</span>
-                            <h3 class="blog-title">Biostatistics & Genetics</h3>
-                            <p class="blog-excerpt">Bayesian hierarchical frameworks to reconstruct perturbation cascades from GWAS variants to core disease genes.</p>
+                            <span class="topic-sequence-badge code-font">Topic 02</span>
+                            <h3 class="blog-title">CASP16 Benchmarking</h3>
+                            <p class="blog-excerpt">Evaluating complex quaternary structure predictions against newly released experimental target datasets.</p>
                         </div>
                         
                         <div class="collapse" id="blogPost2">
                             <div class="blog-content-body">
-                                <p><strong>Key Concept:</strong> Jointly modeling probabilistic cascades from GWAS variants to genes and core disease drivers without hard thresholds.</p>
-                                <p class="mb-0">Preserves posterior uncertainty across multi-omic layers, evaluating $P(\text{Gene}\vert{}\text{Variant})$ and $P(\text{CoreGene}\vert{}\text{Gene})$ simultaneously.</p>
+                                <p><strong>Evaluation Workflow:</strong> Unsolved target coordinates are assessed blindly.</p>
+                                <p class="mb-0">Scoring utilizes Global Distance Test (GDT) metrics to benchmark hybrid architectures directly against homology pipelines.</p>
                             </div>
                         </div>
 
@@ -178,15 +178,15 @@
                 <div class="card card-custom">
                     <div class="card-body-content">
                         <div>
-                            <span class="topic-sequence-badge code-font">Domain 03</span>
-                            <h3 class="blog-title">Computational Bioinformatics</h3>
-                            <p class="blog-excerpt">Single-cell RNA sequencing trajectory inference and spatial transcriptomics deconvolution algorithms.</p>
+                            <span class="topic-sequence-badge code-font">Topic 03</span>
+                            <h3 class="blog-title">Mass Spec & PPI Networks</h3>
+                            <p class="blog-excerpt">Filtering high-throughput spectral libraries to reveal hidden allosteric target interaction sites.</p>
                         </div>
                         
                         <div class="collapse" id="blogPost3">
                             <div class="blog-content-body">
-                                <p><strong>Key Concept:</strong> Dynamic manifold learning for mapping cellular differentiation paths and lineage commitment trajectories.</p>
-                                <p class="mb-0">Leveraging optimal transport theory to align multi-timepoint single-cell profiles and map microenvironmental tissue organization.</p>
+                                <p><strong>Network Analysis:</strong> Processing raw mass spectrometry datasets to control false discovery rates (FDR).</p>
+                                <p class="mb-0">Reconstructing dynamic interaction graphs uncovers actionable druggable interfaces critical for precision oncology.</p>
                             </div>
                         </div>
 
@@ -201,19 +201,115 @@
                 <div class="card card-custom">
                     <div class="card-body-content">
                         <div>
-                            <span class="topic-sequence-badge code-font">Domain 04</span>
-                            <h3 class="blog-title">Medical AI & Diagnostics</h3>
-                            <p class="blog-excerpt">Multimodal foundation models for prognostic modeling using electronic health records and medical imaging.</p>
+                            <span class="topic-sequence-badge code-font">Topic 04</span>
+                            <h3 class="blog-title">Bayesian Perturb Cascades</h3>
+                            <p class="blog-excerpt">Bayesian hierarchical frameworks to reconstruct perturbation cascades from GWAS variants to core disease genes.</p>
                         </div>
                         
                         <div class="collapse" id="blogPost4">
                             <div class="blog-content-body">
-                                <p><strong>Key Concept:</strong> Transformer-based attention mechanisms applied to longitudinal patient timelines for early risk stratification.</p>
-                                <p class="mb-0">Ensuring clinical interpretability via attention rollout metrics and rigorous out-of-distribution generalization testing.</p>
+                                <p><strong>Key Concept:</strong> Jointly modeling probabilistic cascades from GWAS variants to genes without hard thresholds.</p>
+                                <p class="mb-0">Preserves posterior uncertainty across multi-omic layers, evaluating probabilities simultaneously.</p>
                             </div>
                         </div>
 
                         <button class="btn btn-toggle-blog w-100 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#blogPost4" aria-expanded="false" aria-controls="blogPost4" onclick="toggleButtonText(this)">
+                            <span class="btn-text">Read More</span> <i class="fa-solid fa-chevron-down icon-arrow"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-custom">
+                    <div class="card-body-content">
+                        <div>
+                            <span class="topic-sequence-badge code-font">Topic 05</span>
+                            <h3 class="blog-title">Single-Cell Trajectory Inference</h3>
+                            <p class="blog-excerpt">Single-cell RNA sequencing trajectory inference and spatial transcriptomics deconvolution algorithms.</p>
+                        </div>
+                        
+                        <div class="collapse" id="blogPost5">
+                            <div class="blog-content-body">
+                                <p><strong>Key Concept:</strong> Dynamic manifold learning for mapping cellular differentiation paths and lineage commitments.</p>
+                                <p class="mb-0">Leveraging optimal transport theory to align multi-timepoint single-cell profiles and map tissue organization.</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-toggle-blog w-100 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#blogPost5" aria-expanded="false" aria-controls="blogPost5" onclick="toggleButtonText(this)">
+                            <span class="btn-text">Read More</span> <i class="fa-solid fa-chevron-down icon-arrow"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-custom">
+                    <div class="card-body-content">
+                        <div>
+                            <span class="topic-sequence-badge code-font">Topic 06</span>
+                            <h3 class="blog-title">Multimodal Medical AI</h3>
+                            <p class="blog-excerpt">Multimodal foundation models for prognostic modeling using electronic health records and medical imaging.</p>
+                        </div>
+                        
+                        <div class="collapse" id="blogPost6">
+                            <div class="blog-content-body">
+                                <p><strong>Key Concept:</strong> Transformer-based attention mechanisms applied to longitudinal patient timelines for early risk stratification.</p>
+                                <p class="mb-0">Ensuring clinical interpretability via attention rollout metrics and rigorous out-of-distribution testing.</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-toggle-blog w-100 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#blogPost6" aria-expanded="false" aria-controls="blogPost6" onclick="toggleButtonText(this)">
+                            <span class="btn-text">Read More</span> <i class="fa-solid fa-chevron-down icon-arrow"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-custom">
+                    <div class="card-body-content">
+                        <div>
+                            <span class="topic-sequence-badge code-font">Topic 07</span>
+                            <h3 class="blog-title">Target Prioritization Engines</h3>
+                            <p class="blog-excerpt">Translating statistical associations into actionable catalogues of therapeutic candidates with confidence intervals.</p>
+                        </div>
+                        
+                        <div class="collapse" id="blogPost7">
+                            <div class="blog-content-body">
+                                <p><strong>Translational Endpoint:</strong> Merging rare pLOF burdens, common GWAS signals, and drug target databases.</p>
+                                <p class="mb-0">Accelerates precision medicine pipelines by scoring both biological causality and structural tractability.</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-toggle-blog w-100 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#blogPost7" aria-expanded="false" aria-controls="blogPost7" onclick="toggleButtonText(this)">
+                            <span class="btn-text">Read More</span> <i class="fa-solid fa-chevron-down icon-arrow"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-custom">
+                    <div class="card-body-content">
+                        <div>
+                            <span class="topic-sequence-badge code-font">Topic 08</span>
+                            <h3 class="blog-title">Genomic Data Harmonization</h3>
+                            <p class="blog-excerpt">Synthesizing heterogeneous molecular evidence across eQTL, pQTL, and Perturb-Seq data repositories.</p>
+                        </div>
+                        
+                        <div class="collapse" id="blogPost8">
+                            <div class="blog-content-body">
+                                <p><strong>Data Fusion:</strong> Resolving conflicting statistical signals while linking peripheral signals directly to core networks.</p>
+                                <p class="mb-0">Creates a unified latent variable framework for downstream functional validation experiments.</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-toggle-blog w-100 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#blogPost8" aria-expanded="false" aria-controls="blogPost8" onclick="toggleButtonText(this)">
                             <span class="btn-text">Read More</span> <i class="fa-solid fa-chevron-down icon-arrow"></i>
                         </button>
                     </div>
@@ -240,3 +336,16 @@
                 const targetCollapse = document.querySelector(targetSelector);
                 
                 if (targetCollapse.classList.contains('show')) {
+                    textSpan.textContent = "Minimize";
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    textSpan.textContent = "Read More";
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            }, 50);
+        }
+    </script>
+</body>
+</html>
