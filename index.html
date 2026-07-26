@@ -114,35 +114,12 @@
         .founder-socials a.researchgate-icon:hover { color: #00ccbb; }
         .founder-socials a.linkedin-icon:hover { color: #0077b5; }
 
-        /* Video Feature Section */
-        .video-feature-section {
+        /* Press & Media Features Section */
+        .press-feature-section {
             background-color: #f1f5f9;
             padding: 70px 0;
             border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
-        }
-        .video-container-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-            background: #000;
-        }
-        .video-container-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* Press & Media Features Section */
-        .press-feature-section {
-            background-color: #ffffff;
-            padding: 70px 0;
         }
         .twitter-embed-container {
             display: flex;
@@ -150,19 +127,30 @@
             overflow: hidden;
         }
         .icgeb-feature-card {
-            background: linear-gradient(135deg, #1c2541, #3a506b);
-            color: white;
+            background: #ffffff;
+            color: #2d3748;
             border-radius: 12px;
-            padding: 40px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
         }
         .icgeb-feature-card:hover {
             transform: translateY(-5px);
+        }
+        .icgeb-cover-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+        .icgeb-content-padding {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
         }
 
         /* Dropdown Trigger Header Style */
@@ -308,7 +296,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link px-3" href="#domains">Research Domains</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#spotlight">Spotlight</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#press">Press & Media</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="#contact">Collaborate</a></li>
                 </ul>
             </div>
@@ -364,59 +352,36 @@
         </div>
     </section>
 
-    <section class="video-feature-section" id="spotlight">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-8">
-                    <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(58, 80, 107, 0.1); color: #3a506b;">Featured Broadcast</span>
-                    <h2 class="fw-bold text-dark mb-3">UNOSSC EMPOWER Fellowship Journey</h2>
-                    <p class="text-muted">Watch the featured documentary tracking the transition from bioinformatics research in Bangladesh to advanced molecular modeling at ICGEB New Delhi.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="video-container-wrapper">
-                        <iframe src="https://www.youtube-nocookie.com/embed/Qgyj5Th4sMo" title="UNOSSC EMPOWER Fellowship: Ep.2 From Bangladesh to India" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="press-feature-section">
+    <section class="press-feature-section" id="press">
         <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
                     <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(58, 80, 107, 0.1); color: #3a506b;">Global Recognition</span>
                     <h2 class="fw-bold text-dark mb-3">Media & Press Features</h2>
-                    <p class="text-muted">Highlights and official announcements regarding the fellowship and empowering women scientists globally.</p>
+                    <p class="text-muted">Highlights and official announcements regarding scientific empowerment and international research fellowships.</p>
                 </div>
             </div>
 
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-9">
                     <div class="icgeb-feature-card">
-                        <div>
-                            <span class="badge bg-light text-dark mb-3 code-font">ICGEB Official Feature</span>
-                            <h3 class="fw-bold mb-3">Empowering Women Scientists from the Global South</h3>
-                            <p class="text-white-50 mb-4">Read the official ICGEB feature article detailing scientific empowerment, research excellence, and international collaboration pathways.</p>
-                        </div>
-                        <div>
-                            <a href="https://www.icgeb.org/empowering-women-scientists-from-the-global-south/" target="_blank" class="btn btn-premium">Read Full Feature Article <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+                        <img src="https://www.icgeb.org/wp-content/uploads/2023/03/Empowering-Women-Scientists-Global-South.jpg" alt="Empowering Women Scientists from the Global South" class="icgeb-cover-img">
+                        <div class="icgeb-content-padding">
+                            <div>
+                                <span class="badge bg-secondary text-white mb-2 code-font">ICGEB Official Feature</span>
+                                <h3 class="fw-bold text-dark mb-2">Empowering Women Scientists from the Global South</h3>
+                                <p class="text-muted mb-4">Read the official ICGEB feature article detailing scientific empowerment, research excellence, and international collaboration pathways.</p>
+                            </div>
+                            <div>
+                                <a href="https://www.icgeb.org/empowering-women-scientists-from-the-global-south/" target="_blank" class="btn btn-dark">Read Full Feature Article <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-5">
-                    <div class="twitter-embed-container">
-                        <blockquote class="twitter-tweet">
-                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
-                        </blockquote>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
                     <div class="twitter-embed-container">
                         <blockquote class="twitter-tweet">
                             <a href="https://x.com/UNOSSC/status/1633458803134930944"></a>
@@ -456,7 +421,6 @@
                                     <a href="notes/genomics-notes.html" class="btn btn-sm btn-dark">
                                         <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
                                     </a>
-                                    <a href="https://www.youtube.com/watch?v=Qgyj5Th4sMo" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                                 </div>
                             </div>
                         </div>
@@ -477,7 +441,6 @@
                                     <a href="notes/transcriptom-notes.html" class="btn btn-sm btn-dark">
                                         <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
                                     </a>
-                                    <a href="https://www.youtube.com/watch?v=Qgyj5Th4sMo" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                                 </div>
                             </div>
                         </div>
@@ -498,7 +461,6 @@
                                     <a href="notes/AI-notes.html" class="btn btn-sm btn-dark">
                                         <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
                                     </a>
-                                    <a href="https://www.youtube.com/watch?v=Qgyj5Th4sMo" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                                 </div>
                             </div>
                         </div>
@@ -519,7 +481,6 @@
                                     <a href="notes/proteomics-notes.html" class="btn btn-sm btn-dark">
                                         <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
                                     </a>
-                                    <a href="https://www.youtube.com/watch?v=Qgyj5Th4sMo" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                                 </div>
                             </div>
                         </div>
@@ -540,7 +501,6 @@
                                     <a href="notes/biostat-notes.html" class="btn btn-sm btn-dark">
                                         <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
                                     </a>
-                                    <a href="https://www.youtube.com/watch?v=Qgyj5Th4sMo" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                                 </div>
                             </div>
                         </div>
@@ -561,7 +521,6 @@
                                     <a href="notes/molecular-notes.html" class="btn btn-sm btn-dark">
                                         <i class="fa-solid fa-book-open me-2"></i>Read Notes & Blog
                                     </a>
-                                    <a href="https://www.youtube.com/watch?v=Qgyj5Th4sMo" target="_blank" class="btn btn-sm btn-outline-dark w-100 mt-2"><i class="fa-brands fa-youtube me-2"></i>Watch Overview</a> 
                                 </div>
                             </div>
                         </div>
