@@ -139,6 +139,32 @@
             border: 0;
         }
 
+        /* Press & Media Features Section */
+        .press-feature-section {
+            background-color: #ffffff;
+            padding: 70px 0;
+        }
+        .twitter-embed-container {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .icgeb-feature-card {
+            background: linear-gradient(135deg, #1c2541, #3a506b);
+            color: white;
+            border-radius: 12px;
+            padding: 40px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .icgeb-feature-card:hover {
+            transform: translateY(-5px);
+        }
+
         /* Dropdown Trigger Header Style */
         .capabilities-popup-bar {
             position: relative;
@@ -282,7 +308,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link px-3" href="#domains">Research Domains</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#video-spotlight">Spotlight</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#spotlight">Spotlight</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="#contact">Collaborate</a></li>
                 </ul>
             </div>
@@ -338,7 +364,7 @@
         </div>
     </section>
 
-    <section class="video-feature-section" id="video-spotlight">
+    <section class="video-feature-section" id="spotlight">
         <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
@@ -351,6 +377,50 @@
                 <div class="col-lg-9">
                     <div class="video-container-wrapper">
                         <iframe src="https://www.youtube-nocookie.com/embed/Qgyj5Th4sMo" title="UNOSSC EMPOWER Fellowship: Ep.2 From Bangladesh to India" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="press-feature-section">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(58, 80, 107, 0.1); color: #3a506b;">Global Recognition</span>
+                    <h2 class="fw-bold text-dark mb-3">Media & Press Features</h2>
+                    <p class="text-muted">Highlights and official announcements regarding the fellowship and empowering women scientists globally.</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-9">
+                    <div class="icgeb-feature-card">
+                        <div>
+                            <span class="badge bg-light text-dark mb-3 code-font">ICGEB Official Feature</span>
+                            <h3 class="fw-bold mb-3">Empowering Women Scientists from the Global South</h3>
+                            <p class="text-white-50 mb-4">Read the official ICGEB feature article detailing scientific empowerment, research excellence, and international collaboration pathways.</p>
+                        </div>
+                        <div>
+                            <a href="https://www.icgeb.org/empowering-women-scientists-from-the-global-south/" target="_blank" class="btn btn-premium">Read Full Feature Article <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="twitter-embed-container">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="twitter-embed-container">
+                        <blockquote class="twitter-tweet">
+                            <a href="https://x.com/UNOSSC/status/1633458803134930944"></a>
+                        </blockquote>
                     </div>
                 </div>
             </div>
@@ -534,6 +604,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script>
         function toggleDropUpPanel() {
             const panel = document.getElementById('dropupPanel');
