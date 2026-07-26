@@ -114,66 +114,98 @@
         .founder-socials a.researchgate-icon:hover { color: #00ccbb; }
         .founder-socials a.linkedin-icon:hover { color: #0077b5; }
 
-        /* Video Feature Section */
-        .video-feature-section {
+        /* Unified Horizontal Media Slider Section */
+        .media-slider-section {
             background-color: #f1f5f9;
             padding: 70px 0;
             border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
-        }
-        .video-container-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-            background: #000;
         }
-        .video-container-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* Press & Media Features Section */
-        .press-feature-section {
-            background-color: #ffffff;
-            padding: 70px 0;
-        }
-        .twitter-embed-container {
+        .media-slider-container {
             display: flex;
-            justify-content: center;
-            overflow: hidden;
+            gap: 25px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 10px 30px 10px;
+            scrollbar-width: thin;
+            scrollbar-color: #cbd5e1 #f1f5f9;
         }
-        .icgeb-feature-card {
+        .media-slider-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .media-slider-container::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        .media-slider-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .media-card-item {
+            flex: 0 0 400px;
             background: #ffffff;
-            color: #2d3748;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-            transition: transform 0.3s ease;
-            height: 100%;
             display: flex;
             flex-direction: column;
+            border: 1px solid #e2e8f0;
         }
-        .icgeb-feature-card:hover {
-            transform: translateY(-5px);
-        }
-        .icgeb-cover-img {
+        .media-card-header {
+            position: relative;
             width: 100%;
-            height: 240px;
-            object-fit: cover;
+            height: 230px;
+            background: #000;
+            overflow: hidden;
         }
-        .icgeb-content-padding {
-            padding: 30px;
+        .media-card-header iframe,
+        .media-card-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 0;
+        }
+        .media-card-body {
+            padding: 25px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             flex-grow: 1;
+        }
+        .slider-arrow-btn {
+            position: absolute;
+            top: 55%;
+            transform: translateY(-50%);
+            background: #ffffff;
+            color: #1c2541;
+            border: 1px solid #cbd5e1;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .slider-arrow-btn:hover {
+            background: #1c2541;
+            color: #ffffff;
+            border-color: #1c2541;
+        }
+        .slider-prev { left: 15px; }
+        .slider-next { right: 15px; }
+        
+        .twitter-card-inner {
+            padding: 15px;
+            background: #ffffff;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         /* Dropdown Trigger Header Style */
@@ -319,8 +351,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link px-3" href="#domains">Research Domains</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#spotlight">Spotlight</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#press">Press & Media</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#media">Media & Spotlight</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="#contact">Collaborate</a></li>
                 </ul>
             </div>
@@ -376,68 +407,70 @@
         </div>
     </section>
 
-    <section class="video-feature-section" id="spotlight">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
+    <section class="media-slider-section" id="media">
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center mb-4">
                 <div class="col-lg-8">
-                    <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(58, 80, 107, 0.1); color: #3a506b;">Featured Broadcast</span>
-                    <h2 class="fw-bold text-dark mb-3">UNOSSC EMPOWER Fellowship Journey</h2>
-                    <p class="text-muted">Watch the featured documentary tracking the transition from bioinformatics research in Bangladesh to advanced molecular modeling at ICGEB New Delhi.</p>
+                    <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(58, 80, 107, 0.1); color: #3a506b;">Global Recognition & Spotlight</span>
+                    <h2 class="fw-bold text-dark mb-2">Media & Spotlight Features</h2>
+                    <p class="text-muted">Explore featured documentaries, international fellowships, and press announcements.</p>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="video-container-wrapper">
-                        <iframe src="https://www.youtube-nocookie.com/embed/Qgyj5Th4sMo" title="UNOSSC EMPOWER Fellowship: Ep.2 From Bangladesh to India" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <button class="slider-arrow-btn slider-prev" onclick="scrollMediaSlider(-1)" aria-label="Previous">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow-btn slider-next" onclick="scrollMediaSlider(1)" aria-label="Next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <div class="media-slider-container" id="mediaSlider">
+                
+                <div class="media-card-item">
+                    <div class="media-card-header">
+                        <iframe src="https://www.youtube-nocookie.com/embed/Qgyj5Th4sMo" title="UNOSSC EMPOWER Fellowship" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="press-feature-section" id="press">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-8">
-                    <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(58, 80, 107, 0.1); color: #3a506b;">Global Recognition</span>
-                    <h2 class="fw-bold text-dark mb-3">Media & Press Features</h2>
-                    <p class="text-muted">Highlights and official announcements regarding scientific empowerment and international research fellowships.</p>
-                </div>
-            </div>
-
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-9">
-                    <div class="icgeb-feature-card">
-                        <img src="https://www.icgeb.org/wp-content/uploads/2023/03/Empowering-Women-Scientists-Global-South.jpg" alt="Empowering Women Scientists from the Global South" class="icgeb-cover-img">
-                        <div class="icgeb-content-padding">
-                            <div>
-                                <span class="badge bg-secondary text-white mb-2 code-font">ICGEB Official Feature</span>
-                                <h3 class="fw-bold text-dark mb-2">Empowering Women Scientists from the Global South</h3>
-                                <p class="text-muted mb-4">Read the official ICGEB feature article detailing scientific empowerment, research excellence, and international collaboration pathways.</p>
-                            </div>
-                            <div>
-                                <a href="https://www.icgeb.org/empowering-women-scientists-from-the-global-south/" target="_blank" class="btn btn-dark">Read Full Feature Article <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
-                            </div>
+                    <div class="media-card-body">
+                        <div>
+                            <span class="badge bg-secondary text-white mb-2 code-font">Featured Broadcast</span>
+                            <h4 class="fw-bold text-dark mb-2">UNOSSC EMPOWER Fellowship</h4>
+                            <p class="text-muted small mb-0">Documentary tracking the transition from bioinformatics research in Bangladesh to advanced molecular modeling at ICGEB.</p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-5">
-                    <div class="twitter-embed-container">
-                        <blockquote class="twitter-tweet">
+                <div class="media-card-item">
+                    <div class="media-card-header">
+                        <img src="https://www.icgeb.org/wp-content/uploads/2023/03/Empowering-Women-Scientists-Global-South.jpg" alt="Empowering Women Scientists from the Global South">
+                    </div>
+                    <div class="media-card-body">
+                        <div>
+                            <span class="badge bg-secondary text-white mb-2 code-font">ICGEB Feature</span>
+                            <h4 class="fw-bold text-dark mb-2">Empowering Women Scientists</h4>
+                            <p class="text-muted small mb-3">Official ICGEB feature article detailing scientific empowerment and international research excellence.</p>
+                        </div>
+                        <div>
+                            <a href="https://www.icgeb.org/empowering-women-scientists-from-the-global-south/" target="_blank" class="btn btn-sm btn-dark">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-card-item">
+                    <div class="media-card-body twitter-card-inner p-2">
+                        <blockquote class="twitter-tweet w-100 m-0">
                             <a href="https://x.com/UNOSSC/status/1636094104630075394"></a>
                         </blockquote>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-5">
-                    <div class="twitter-embed-container">
-                        <blockquote class="twitter-tweet">
+
+                <div class="media-card-item">
+                    <div class="media-card-body twitter-card-inner p-2">
+                        <blockquote class="twitter-tweet w-100 m-0">
                             <a href="https://x.com/UNOSSC/status/1633458803134930944"></a>
                         </blockquote>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -621,6 +654,15 @@
             
             panel.classList.toggle('collapsed-panel');
             headerBar.classList.toggle('collapsed');
+        }
+
+        function scrollMediaSlider(direction) {
+            const slider = document.getElementById('mediaSlider');
+            const scrollAmount = 425; // Card width + gap
+            slider.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
         }
     </script>
 </body>
