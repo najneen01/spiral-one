@@ -28,34 +28,22 @@
             font-family: 'JetBrains Mono', monospace;
         }
         
-        /* Modern Glassmorphic / Clean Light-Tech Hero Theme */
+        /* Deep Professional Navy-Teal Hero Theme */
         .hero-section {
-            background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 50%, #e2e8f0 100%);
-            color: #1e293b;
+            background: linear-gradient(145deg, #070f1e 0%, #0f1c3f 50%, #182848 100%);
+            color: white;
             padding: 110px 0;
             position: relative;
             overflow: hidden;
-            border-bottom: 1px solid #cbd5e1;
         }
-        .hero-section::before {
+        .hero-section::after {
             content: '';
             position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(100, 223, 223, 0.2) 0%, rgba(255,255,255,0) 70%);
-            z-index: 1;
-            border-radius: 50%;
-        }
-        .hero-content-wrapper {
-            position: relative;
-            z-index: 2;
-        }
-        .hero-badge {
-            background: rgba(15, 23, 42, 0.05);
-            color: #0f172a;
-            border: 1px solid rgba(15, 23, 42, 0.1);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to top, #f7fafc, rgba(247,250,252,0));
         }
 
         /* Quote & Profile Section Spacing */
@@ -129,6 +117,17 @@
         .founder-socials a.researchgate-icon:hover { color: #00ccbb; }
         .founder-socials a.linkedin-icon:hover { color: #0077b5; }
 
+        /* PRODUCT SPOTLIGHT BANNER STYLES */
+        .product-spotlight-banner {
+            background: linear-gradient(135deg, #1c2541 0%, #3a506b 100%);
+            border-radius: 16px;
+            color: white;
+            padding: 40px 50px;
+            box-shadow: 0 15px 35px rgba(28, 37, 65, 0.15);
+            margin-bottom: 40px;
+            border: 1px solid rgba(100, 223, 223, 0.2);
+        }
+
         /* MEDIA SECTION STYLES */
         .media-spotlight-section {
             background-color: #f1f5f9;
@@ -136,7 +135,6 @@
             border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
         }
-        /* Standard Cards (Row 1) */
         .standard-media-card {
             background: #ffffff;
             border-radius: 12px;
@@ -302,8 +300,8 @@
             display: inline-block;
         }
         .btn-premium {
-            background-color: #0f172a;
-            color: #ffffff;
+            background-color: #64dfdf;
+            color: #0b132b;
             font-weight: 600;
             border: none;
             padding: 12px 28px;
@@ -311,7 +309,7 @@
             transition: background 0.2s;
         }
         .btn-premium:hover {
-            background-color: #334155;
+            background-color: #4ea8de;
             color: white;
         }
         .nav-link {
@@ -335,6 +333,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="#product">Products</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="#domains">Research Domains</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="#media">Media & Spotlight</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="#contact">Collaborate</a></li>
@@ -344,15 +343,15 @@
     </nav>
 
     <header class="hero-section d-flex align-items-center">
-        <div class="container text-center text-lg-start hero-content-wrapper">
+        <div class="container text-center text-lg-start">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <span class="badge hero-badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font shadow-sm">Translational Data Science</span>
-                    <h1 class="display-4 fw-bold mb-3 text-slate-900">Bridging Wet-Lab Insight with Multi-Omics Architecture</h1>
-                    <p class="lead text-secondary mb-4">Scalable, end-to-end computational frameworks providing advanced inference, single-cell analysis, and structured machine learning pipelines for therapeutic discovery.</p>
+                    <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(255,255,255,0.1); color: #64dfdf;">Translational Data Science</span>
+                    <h1 class="display-4 fw-bold mb-3">Bridging Wet-Lab Insight with Multi-Omics Architecture</h1>
+                    <p class="lead text-white-50 mb-4">Scalable, end-to-end computational frameworks providing advanced inference, single-cell analysis, and structured machine learning pipelines for therapeutic discovery.</p>
                     <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
-                        <a href="#domains" class="btn btn-premium shadow-sm">Explore Capabilities</a>
-                        <a href="#contact" class="btn btn-outline-dark px-4 py-2 shadow-sm" style="border-radius: 8px;">Request Consulting</a>
+                        <a href="#domains" class="btn btn-premium">Explore Capabilities</a>
+                        <a href="#contact" class="btn btn-outline-light px-4 py-2" style="border-radius: 8px;">Request Consulting</a>
                     </div>
                 </div>
             </div>
@@ -470,7 +469,7 @@
                         <div class="card card-custom">
                             <img src="images/proteomics.jpeg" class="card-banner-img" alt="Proteomics Structural Data Mapping">
                             <div class="card-body-content">
-                                <h4 class="card-title-custom">Structural Biology & Structural Proteomics</h4>
+                                <h4 class="card-title-custom">Structural Biology & Proteomics</h4>
                                 <p class="card-text-custom">Mapping expression dynamics, structural changes, and critical protein-protein interaction networks.</p>
                                 <div class="badge-container-custom">
                                     <span class="badge-tech">Mass Spec Processing</span>
@@ -530,6 +529,23 @@
             </div>
         </div>
     </main>
+
+    <section class="container my-5" id="product">
+        <div class="product-spotlight-banner">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-info text-dark text-uppercase tracking-wider px-3 py-1 mb-2 code-font">Featured Platform Product</span>
+                    <h2 class="fw-bold mb-3">Spiral One Matrix Suite</h2>
+                    <p class="text-white-50 mb-0">An interactive, production-ready web application built for executing streamlined computational matrix calculations and advanced multi-omics metrics analysis directly in your browser.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <a href="https://spiralone-matrix-suite.streamlit.app/" target="_blank" class="btn btn-premium btn-lg shadow">
+                        <i class="fa-solid fa-rocket me-2"></i>Launch App
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="media-spotlight-section" id="media">
         <div class="container">
