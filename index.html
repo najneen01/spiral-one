@@ -193,14 +193,13 @@
             width: 100% !important;
         }
 
-        /* Highlighted Research Domains Section Wrapper */
-        .research-domains-wrapper {
-            background-color: #f5f5ab;
-            border-radius: 16px;
-            padding: 40px 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        /* Full-Width Background Section for Research Domains */
+        .domains-section-full {
+            background-color: #d3d0db;
+            width: 100%;
+            padding: 80px 0;
+            margin-top: 40px;
+            margin-bottom: 40px;
         }
 
         /* Dropdown Trigger Header Style */
@@ -403,9 +402,9 @@
         </div>
     </section>
 
-    <main class="container my-5 py-4" id="domains">
-        
-        <div class="research-domains-wrapper">
+    <div class="domains-section-full" id="domains">
+        <div class="container">
+            
             <div class="container mb-4 px-0">
                 <div class="capabilities-popup-bar" onclick="toggleDropUpPanel()">
                     <div class="popup-indicator code-font"><i class="fa-solid fa-bolt me-1"></i> Core Stack</div>
@@ -541,8 +540,11 @@
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
+    </div>
+
+    <main class="container py-2">
         <div class="container px-0" id="product">
             <div class="product-spotlight-banner">
                 <div class="row align-items-center">
@@ -644,36 +646,4 @@
                 <div class="col-md-6">
                     <h5 class="text-white mb-3">Initiate a Project / Collaboration</h5>
                     <form action="https://formspree.io/f/meewdzka" method="POST">
-                        <div class="row g-2 mb-3">
-                            <div class="col"><input type="text" name="name" class="form-control bg-secondary text-white border-0" placeholder="Your Name" required></div>
-                            <div class="col"><input type="email" name="email" class="form-control bg-secondary text-white border-0" placeholder="Email Address" required></div>
-                        </div>
-                        <div class="mb-3">
-                            <textarea name="message" class="form-control bg-secondary text-white border-0" rows="3" placeholder="Describe your data or research objectives..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-premium w-100">Send Inquiry</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="row pt-4">
-                <div class="col text-center text-white-50 small">
-                    <p class="mb-0">&copy; 2026 SPIRALONE. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script>
-        function toggleDropUpPanel() {
-            const panel = document.getElementById('dropupPanel');
-            const headerBar = document.querySelector('.capabilities-popup-bar');
-            
-            panel.classList.toggle('collapsed-panel');
-            headerBar.classList.toggle('collapsed');
-        }
-    </script>
-</body>
-</html>
+                        <div class="row g-2 mb-
