@@ -10,9 +10,37 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f7fafc; color: #2d3748; line-height: 1.8; scroll-behavior: smooth; }
         .code-font { font-family: 'JetBrains Mono', monospace; }
+        
+        /* Top Navigation Header Bar */
+        .top-nav-bar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+        .nav-logo img {
+            height: 42px;
+            object-fit: contain;
+        }
+        .home-btn {
+            background-color: #171026;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 8px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .home-btn:hover {
+            background-color: #2b2342;
+            color: #ffffff;
+        }
+
         .article-header { background: linear-gradient(135deg, #171026 0%, #2b2342 100%); color: white; padding: 70px 0; }
-        .back-link { color: #b794f4; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; margin-bottom: 20px; }
-        .back-link:hover { color: #d6bcfa; text-decoration: underline; }
         .badge-tag { background: #f3e8ff; color: #6b46c1; font-weight: 600; font-size: 0.75rem; padding: 5px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; }
 
         /* Medium-Style Table of Contents (Index Box) */
@@ -107,9 +135,23 @@
 </head>
 <body>
 
+    <div class="top-nav-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="nav-logo">
+                <a href="../index.html">
+                    <img src="../images/spiral_logo.png" alt="Spiral One Logo">
+                </a>
+            </div>
+            <div>
+                <a href="../index.html" class="home-btn">
+                    <i class="fa-solid fa-house me-1"></i> Home
+                </a>
+            </div>
+        </div>
+    </div>
+
     <header class="article-header">
         <div class="container">
-            <a href="../index.html#domains" class="back-link"><i class="fa-solid fa-arrow-left me-2"></i>Back to Research Domains</a>
             <span class="badge-tag mb-3 d-inline-block">Biostatistics & Statistical Genetics Proof Series</span>
             <h1 class="display-5 fw-bold mb-3">Translational Statistical Genetics: Bridging UNIL FBM Frameworks</h1>
             <p class="lead text-white-50 mb-0">An in-depth medium-style research publication documenting rigorous methodological frameworks in genetic architecture, multi-omics, and causal modeling.</p>
