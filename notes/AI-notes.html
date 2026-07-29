@@ -3,224 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI / ML Architectures & Research Feed | Spiral One</title>
-    
-    <link rel="icon" type="image/png" href="../images/spiral_logo.png">
-    
+    <title>From Scratch to Deep Learning: AI for Structural Biology | Spiral One</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fcfcfd;
-            color: #1e293b;
-        }
-        .code-font {
-            font-family: 'JetBrains Mono', monospace;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f7fafc; color: #2d3748; line-height: 1.8; scroll-behavior: smooth; }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
         
-        /* Distinct Modern Emerald Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #064e3b, #065f46, #047857);
+        /* Top Navigation Header Bar */
+        .top-nav-bar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+        .nav-logo img {
+            height: 42px;
+            object-fit: contain;
+        }
+        .home-btn {
+            background-color: #171026;
             color: #ffffff;
-            padding: 90px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.15);
-        }
-        .hero-section::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at 20% 30%, rgba(52, 211, 153, 0.25) 0%, transparent 60%);
-            pointer-events: none;
-        }
-        
-        .card-custom {
-            border: none;
-            border-radius: 12px;
-            background: #ffffff;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
-        }
-        .card-custom:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-        }
-        .card-body-content {
-            padding: 28px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-        
-        /* Distinct Header Colors for Each Topic Card */
-        .badge-topic-1 { background: #dbeafe; color: #1e40af; border-left: 4px solid #3b82f6; }
-        .badge-topic-2 { background: #fae8ff; color: #86198f; border-left: 4px solid #a855f7; }
-        .badge-topic-3 { background: #ccfbf1; color: #115e59; border-left: 4px solid #14b8a6; }
-
-        .topic-sequence-badge {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 6px 12px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 14px;
-        }
-        .blog-title {
-            font-family: 'Lora', serif;
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 12px;
-            line-height: 1.4;
-        }
-        .blog-excerpt {
-            font-size: 0.92rem;
-            color: #64748b;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .blog-content-body {
+            font-weight: 500;
             font-size: 0.9rem;
-            color: #334155;
-            line-height: 1.7;
-            border-top: 1px dashed #e2e8f0;
-            padding-top: 16px;
-            margin-top: 10px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.2s;
         }
-        .btn-toggle-blog {
-            background: transparent;
-            color: #0f172a;
-            border: 1px solid #cbd5e1;
-            font-weight: 600;
-            font-size: 0.85rem;
-            padding: 8px 16px;
-            border-radius: 6px;
-            margin-top: auto;
-            transition: all 0.2s ease;
+        .home-btn:hover {
+            background-color: #2b2342;
+            color: #ffffff;
+        }
+
+        .article-header { background: linear-gradient(135deg, #171026 0%, #2b2342 100%); color: white; padding: 70px 0; }
+        .badge-tag { background: #f3e8ff; color: #6b46c1; font-weight: 600; font-size: 0.75rem; padding: 5px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Medium-Style Table of Contents (Index Box) */
+        .toc-box {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid #b794f4;
+            border-radius: 12px;
+            padding: 30px 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+        }
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #edf2f7;
+        }
+        .toc-list li:last-child {
+            border-bottom: none;
+        }
+        .toc-list a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
         }
-        .btn-toggle-blog:hover {
-            background: #064e3b;
-            color: #ffffff;
-            border-color: #064e3b;
+        .toc-list a:hover {
+            color: #6b46c1;
+            padding-left: 5px;
+        }
+        .toc-list span {
+            color: #b794f4;
+            font-weight: 600;
+            margin-right: 12px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Medium-Style Blog Sections */
+        .blog-section {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+        .blog-title {
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+        .blog-text {
+            font-size: 1.05rem;
+            color: #4a5568;
+            margin-bottom: 25px;
+        }
+
+        /* Medium-Style Inline Photo Layouts */
+        .medium-img-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .medium-img-row img, .medium-img-single img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            object-fit: cover;
+        }
+        .medium-img-single {
+            margin: 30px 0;
+        }
+        .img-caption {
+            font-size: 0.85rem;
+            color: #718096;
+            text-align: center;
+            margin-top: 8px;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-dark code-font d-flex align-items-center" href="../index.html">
-                <img src="../images/spiral_logo.png" alt="Spiral One Logo" style="height:38px; width:auto;" class="me-2" onerror="this.style.display='none'; document.getElementById('fallback-icon').style.display='inline-block';">
-        
-            </a>
-            <a href="../index.html" class="btn btn-sm btn-outline-dark"><i class="fa-solid fa-house me-1"></i> Home</a>
+    <div class="top-nav-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="nav-logo">
+                <a href="../index.html">
+                    <img src="../images/spiral_logo.png" alt="Spiral One Logo">
+                </a>
+            </div>
+            <div>
+                <a href="../index.html" class="home-btn">
+                    <i class="fa-solid fa-house me-1"></i> Home
+                </a>
+            </div>
         </div>
-    </nav>
+    </div>
 
-    <header class="hero-section">
-        <div class="container position-relative">
-            <span class="badge text-uppercase tracking-wider px-3 py-2 mb-3 code-font" style="background: rgba(255, 255, 255, 0.15); color: #a7f3d0; border: 1px solid rgba(167, 243, 208, 0.3);">AI & ML Architectures Domain</span>
-            <h1 class="display-5 fw-bold mb-3 text-white">Next-Gen Machine Learning Frameworks</h1>
-            <p class="lead text-white-50 mx-auto" style="max-width: 650px;">Modular explorations covering modern geometric deep learning, diffusion models, and equivariant neural network topologies.</p>
+    <header class="article-header">
+        <div class="container">
+            <span class="badge-tag mb-3 d-inline-block">Foundations Proof Series</span>
+            <h1 class="display-5 fw-bold mb-3">From Scratch to Deep Learning: AI Foundations for Structural Biology</h1>
+            <p class="lead text-white-50 mb-0">A comprehensive beginner-to-advanced roadmap bridging core machine learning paradigms, deep learning domains, and structural biology architectures.</p>
         </div>
     </header>
 
-    <main class="container my-5 py-3">
-        <div class="row g-4">
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-custom">
-                    <div class="card-body-content">
-                        <div>
-                            <span class="topic-sequence-badge badge-topic-1 code-font">Topic 01 &bull; Geometric DL</span>
-                            <h3 class="blog-title">Equivariant Message Passing Neural Networks</h3>
-                            <p class="blog-excerpt">Designing network layers that preserve 3D Euclidean rotation and translation symmetries natively in PyTorch.</p>
-                        </div>
-                        
-                        <div class="collapse" id="blogPost1">
-                            <div class="blog-content-body">
-                                <p><strong>Core Architectural Shift:</strong> Standard MLPs break coordinate transformations. Equivariant layers synchronize spatial vector orientations.</p>
-                                <p class="mb-0">Crucial for predicting atomic shifts in macromolecular structures without violating physics constraints.</p>
-                            </div>
-                        </div>
-
-                        <button class="btn btn-toggle-blog w-100 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#blogPost1" aria-expanded="false" aria-controls="blogPost1" onclick="toggleButtonText(this)">
-                            <span class="btn-text">Read More</span> <i class="fa-solid fa-chevron-down icon-arrow"></i>
-                        </button>
-                    </div>
+    <main class="container my-5">
+        
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <div class="toc-box">
+                    <h3 class="fw-bold h5 mb-3 text-dark"><i class="fa-solid fa-list-ul me-2 text-purple"></i> Table of Contents (Index)</h3>
+                    <ul class="toc-list">
+                        <li><a href="#topic1"><span>01</span> What is Machine Learning and Deep Learning?</a></li>
+                        <li><a href="#topic2"><span>02</span> Core Types of Machine Learning Paradigms</a></li>
+                        <li><a href="#topic3"><span>03</span> Specialized Domains & Architectures in Deep Learning</a></li>
+                        <li><a href="#topic4"><span>04</span> Geometric Deep Learning & 3D Spatial Modeling</a></li>
+                        <li><a href="#topic5"><span>05</span> SE(3)-Equivariant Neural Networks</a></li>
+                        <li><a href="#topic6"><span>06</span> Generative AI: Diffusion Models & GNNs</a></li>
+                    </ul>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-custom">
-                    <div class="card-body-content">
-                        <div>
-                            <span class="topic-sequence-badge badge-topic-2 code-font">Topic 02 &bull; Generative AI</span>
-                            <h3 class="blog-title">Diffusion Models in Structural Biology</h3>
-                            <p class="blog-excerpt">Iterative score-matching techniques used to generate realistic molecular conformations from noise distributions.</p>
-                        </div>
-                        
-                        <div class="collapse" id="blogPost2">
-                            <div class="blog-content-body">
-                                <p><strong>Generation Workflow:</strong> Forward noise corruption processes are inverted via trained denoising neural networks.</p>
-                                <p class="mb-0">Enables high-fidelity generation of complex protein backbones and custom therapeutic ligand candidates.</p>
-                            </div>
-                        </div>
-
-                        <button class="btn btn-toggle-blog w-100 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#blogPost2" aria-expanded="false" aria-controls="blogPost2" onclick="toggleButtonText(this)">
-                            <span class="btn-text">Read More</span> <i class="fa-solid fa-chevron-down icon-arrow"></i>
-                        </button>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                
+                <section id="topic1" class="blog-section">
+                    <span class="badge bg-light text-dark mb-2 code-font">Topic 01</span>
+                    <h2 class="blog-title">What is Machine Learning and Deep Learning?</h2>
+                    <p class="blog-text">
+                        At its core, **Machine Learning (ML)** is a subset of artificial intelligence that gives computers the ability to learn from data without being explicitly programmed for every rule. Instead of writing hardcoded instructions, you feed an algorithm a dataset to discover patterns. **Deep Learning (DL)** is a specialized subfield inspired by the human brain, utilizing Artificial Neural Networks (ANNs) with multiple hidden layers to ingest raw, complex data automatically.
+                    </p>
+                    <div class="medium-img-single">
+                        <img src="images/ann_vs_ml.jpeg" alt="Artificial Neural Network Architecture Comparison">
+                        <div class="img-caption">Fig 1.1: Multi-layer neural network architecture featuring hierarchical hidden layers.</div>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-custom">
-                    <div class="card-body-content">
+                <section id="topic2" class="blog-section">
+                    <span class="badge bg-light text-dark mb-2 code-font">Topic 02</span>
+                    <h2 class="blog-title">Core Types of Machine Learning Paradigms</h2>
+                    <p class="blog-text">
+                        Understanding how algorithms consume and process information requires analyzing the three primary learning types: Supervised Learning (trained on labeled input-output pairs like binding affinities), Unsupervised Learning (clustering unlabeled data like protein conformations), and Reinforcement Learning (optimizing agent actions via rewards).
+                    </p>
+                    <div class="medium-img-row">
                         <div>
-                            <span class="topic-sequence-badge badge-topic-3 code-font">Topic 03 &bull; Physics-AI</span>
-                            <h3 class="blog-title">Thermodynamic Loss Penalties in Neural Nets</h3>
-                            <p class="blog-excerpt">Integrating laws of physics directly into loss functions to prevent structural steric clashes and bond distortions.</p>
+                            <img src="images/supervised_learning.jpeg" alt="Supervised Learning Workflow">
+                            <div class="img-caption">Fig 2.1: Supervised predictive modeling pipeline.</div>
                         </div>
-                        
-                        <div class="collapse" id="blogPost3">
-                            <div class="blog-content-body">
-                                <p><strong>Hybrid Modeling:</strong> Pure data-driven networks ignore atomic energy states. Physics-aware regularization prevents unphysical predictions.</p>
-                                <p class="mb-0">Essential for robust clinical translation in computational drug discovery workflows.</p>
-                            </div>
+                        <div>
+                            <img src="images/unsupervised_clustering.jpeg" alt="Unsupervised Clustering Mapping">
+                            <div class="img-caption">Fig 2.2: Unsupervised latent space clustering.</div>
                         </div>
-
-                        <button class="btn btn-toggle-blog w-100 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#blogPost3" aria-expanded="false" aria-controls="blogPost3" onclick="toggleButtonText(this)">
-                            <span class="btn-text">Read More</span> <i class="fa-solid fa-chevron-down icon-arrow"></i>
-                        </button>
                     </div>
-                </div>
-            </div>
+                </section>
 
+                <section id="topic3" class="blog-section">
+                    <span class="badge bg-light text-dark mb-2 code-font">Topic 03</span>
+                    <h2 class="blog-title">Specialized Domains & Architectures in Deep Learning</h2>
+                    <p class="blog-text">
+                        Different data structures require specialized neural architectures. Multi-Layer Perceptrons handle tabular data, Convolutional Neural Networks process grid-like metrics, Recurrent Networks manage sequences, and Transformers use self-attention to parse biological language and sequences.
+                    </p>
+                    <div class="medium-img-single">
+                        <img src="images/transformer_architecture.jpeg" alt="Transformer Self-Attention Mechanism">
+                        <div class="img-caption">Fig 3.1: Self-attention mapping used in modern protein sequence language models.</div>
+                    </div>
+                </section>
+
+                <section id="topic4" class="blog-section">
+                    <span class="badge bg-light text-dark mb-2 code-font">Topic 04</span>
+                    <h2 class="blog-title">Geometric Deep Learning & 3D Spatial Modeling</h2>
+                    <p class="blog-text">
+                        Proteins and drug compounds exist in continuous 3D coordinate space rather than flat grids or text files. Geometric deep learning extends neural networks to non-Euclidean domains, treating macromolecules as 3D point clouds and surface meshes where spatial coordinates dictate interactions.
+                    </p>
+                    <div class="medium-img-row">
+                        <div>
+                            <img src="images/geom_dl_1.jpeg" alt="Protein Point Cloud Spatial Graph">
+                            <div class="img-caption">Fig 4.1: 3D coordinate point cloud mapping of amino acid residues.</div>
+                        </div>
+                        <div>
+                            <img src="images/geom_dl_2.jpeg" alt="Surface Mesh Discretization">
+                            <div class="img-caption">Fig 4.2: Surface mesh analysis of active binding pockets.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="topic5" class="blog-section">
+                    <span class="badge bg-light text-dark mb-2 code-font">Topic 05</span>
+                    <h2 class="blog-title">SE(3)-Equivariant Neural Networks</h2>
+                    <p class="blog-text">
+                        Physical laws dictate that rotating a molecule should not alter its underlying behavior. SE(3)-Equivariant Neural Networks build symmetry directly into the architecture, ensuring that spatial transformations preserve invariance and equivariance properties mathematically.
+                    </p>
+                    <div class="medium-img-single">
+                        <img src="images/equivariant_1.jpeg" alt="SE(3) Equivariant Transformations">
+                        <div class="img-caption">Fig 5.1: Tensor field networks maintaining rotation consistency across coordinate axes.</div>
+                    </div>
+                </section>
+
+                <section id="topic6" class="blog-section">
+                    <span class="badge bg-light text-dark mb-2 code-font">Topic 06</span>
+                    <h2 class="blog-title">Generative AI: Diffusion Models & GNNs</h2>
+                    <p class="blog-text">
+                        Graph Neural Networks handle molecular bonds and atomic neighborhoods via message-passing paradigms, while diffusion models reverse noising trajectories to generate novel protein structures and therapeutic compounds de novo.
+                    </p>
+                    <div class="medium-img-row">
+                        <div>
+                            <img src="images/gnn_1.jpeg" alt="GNN Message Passing">
+                            <div class="img-caption">Fig 6.1: Message passing across atomic bond graphs.</div>
+                        </div>
+                        <div>
+                            <img src="images/diffusion_1.jpeg" alt="Diffusion Denoising Trajectory">
+                            <div class="img-caption">Fig 6.2: Generative stochastic denoising from random noise to folded backbones.</div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
         </div>
     </main>
 
-    <footer class="bg-dark text-light py-4 text-center mt-5">
-        <div class="container">
-            <p class="small text-white-50 mb-0">&copy; 2026 Spiral One. All rights reserved.</p>
-        </div>
+    <footer class="bg-dark text-white py-4 mt-5 text-center small text-white-50">
+        <p class="mb-0">&copy; 2026 Spiral One Computational Biology Suite. Designed for Academic & Research Excellence.</p>
     </footer>
 
-    <script src="https://cdn
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
