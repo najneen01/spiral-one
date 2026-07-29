@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statistical Genetics & Multi-Omics Research Blog | Spiral One</title>
+    <title>From Scratch to Deep Learning: AI for Structural Biology | Spiral One</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -152,9 +152,9 @@
 
     <header class="article-header">
         <div class="container">
-            <span class="badge-tag mb-3 d-inline-block">Biostatistics & Statistical Genetics Proof Series</span>
-            <h1 class="display-5 fw-bold mb-3">Translational Statistical Genetics: Bridging UNIL FBM Frameworks</h1>
-            <p class="lead text-white-50 mb-0">An in-depth medium-style research publication documenting rigorous methodological frameworks in genetic architecture, multi-omics, and causal modeling.</p>
+            <span class="badge-tag mb-3 d-inline-block">Foundations Proof Series</span>
+            <h1 class="display-5 fw-bold mb-3">From Scratch to Deep Learning: AI Foundations for Structural Biology</h1>
+            <p class="lead text-white-50 mb-0">A comprehensive beginner-to-advanced roadmap bridging core machine learning paradigms, deep learning domains, and structural biology architectures.</p>
         </div>
     </header>
 
@@ -165,11 +165,12 @@
                 <div class="toc-box">
                     <h3 class="fw-bold h5 mb-3 text-dark"><i class="fa-solid fa-list-ul me-2 text-purple"></i> Table of Contents (Index)</h3>
                     <ul class="toc-list">
-                        <li><a href="#topic1"><span>01</span> Genome-Wide Association Studies (GWAS) Quality Control</a></li>
-                        <li><a href="#topic2"><span>02</span> Polygenic Risk Scores (PRS) & Polygenic Architecture</a></li>
-                        <li><a href="#topic3"><span>03</span> Mendelian Randomization (MR) Causal Inference</a></li>
-                        <li><a href="#topic4"><span>04</span> Transcriptome-Wide Association (TWAS) Pipelines</a></li>
-                        <li><a href="#topic5"><span>05</span> Large-Scale Multi-Omics Data Fusion & Survival Metrics</a></li>
+                        <li><a href="#topic1"><span>01</span> What is Machine Learning and Deep Learning?</a></li>
+                        <li><a href="#topic2"><span>02</span> Core Types of Machine Learning Paradigms</a></li>
+                        <li><a href="#topic3"><span>03</span> Specialized Domains & Architectures in Deep Learning</a></li>
+                        <li><a href="#topic4"><span>04</span> Geometric Deep Learning & 3D Spatial Modeling</a></li>
+                        <li><a href="#topic5"><span>05</span> SE(3)-Equivariant Neural Networks</a></li>
+                        <li><a href="#topic6"><span>06</span> Generative AI: Diffusion Models & GNNs</a></li>
                     </ul>
                 </div>
             </div>
@@ -180,106 +181,92 @@
                 
                 <section id="topic1" class="blog-section">
                     <span class="badge bg-light text-dark mb-2 code-font">Topic 01</span>
-                    <h2 class="blog-title">Genome-Wide Association Studies (GWAS) Quality Control</h2>
-                    
+                    <h2 class="blog-title">What is Machine Learning and Deep Learning?</h2>
                     <p class="blog-text">
-                        High-throughput genetic investigations depend heavily on rigorous preprocessing pipelines to weed out false positives driven by technical artifacts. Initial filtering mandates checking missingness per individual and per marker, ensuring Hardy-Weinberg equilibrium (HWE) thresholds are maintained across control cohorts.
+                        At its core, **Machine Learning (ML)** is a subset of artificial intelligence that gives computers the ability to learn from data without being explicitly programmed for every rule. Instead of writing hardcoded instructions, you feed an algorithm a dataset to discover patterns. **Deep Learning (DL)** is a specialized subfield inspired by the human brain, utilizing Artificial Neural Networks (ANNs) with multiple hidden layers to ingest raw, complex data automatically.
                     </p>
-
-                    <div class="medium-img-row">
-                        <div>
-                            <img src="images/gwas_qc_1.jpeg" alt="Sample and SNP Missingness Filtering Workflow">
-                            <div class="img-caption">Fig 1.1: Pre-filtering missingness distribution metrics.</div>
-                        </div>
-                        <div>
-                            <img src="images/gwas_qc_2.jpeg" alt="Principal Component Analysis Population Stratification">
-                            <div class="img-caption">Fig 1.2: PCA adjustment visualizing population stratification.</div>
-                        </div>
+                    <div class="medium-img-single">
+                        <img src="images/ann_vs_ml.jpeg" alt="Artificial Neural Network Architecture Comparison">
+                        <div class="img-caption">Fig 1.1: Multi-layer neural network architecture featuring hierarchical hidden layers.</div>
                     </div>
-
-                    <p class="blog-text">
-                        Furthermore, population stratification remains a major confounder in human genetic association testing. By incorporating principal component (PC) covariates derived from linkage disequilibrium (LD)-pruned markers into our regression models, we safeguard statistical validity and accurately isolate true causal signals from background ancestral divergence.
-                    </p>
                 </section>
 
                 <section id="topic2" class="blog-section">
                     <span class="badge bg-light text-dark mb-2 code-font">Topic 02</span>
-                    <h2 class="blog-title">Polygenic Risk Scores (PRS) & Polygenic Architecture</h2>
+                    <h2 class="blog-title">Core Types of Machine Learning Paradigms</h2>
                     <p class="blog-text">
-                        Moving past single-marker significance, polygenic risk scores aggregate thousands or millions of genetic variants to quantify an individual's inherited liability toward complex human phenotypes. Our framework implements standard clumping and thresholding (C+T) alongside advanced Bayesian shrinkage models.
+                        Understanding how algorithms consume and process information requires analyzing the three primary learning types: Supervised Learning (trained on labeled input-output pairs like binding affinities), Unsupervised Learning (clustering unlabeled data like protein conformations), and Reinforcement Learning (optimizing agent actions via rewards).
                     </p>
-
-                    <div class="medium-img-single">
-                        <img src="images/prs_1.jpeg" alt="Polygenic Risk Score Cumulative Distribution Curve">
-                        <div class="img-caption">Fig 2.1: Cumulative liability distribution across stratified risk deciles.</div>
+                    <div class="medium-img-row">
+                        <div>
+                            <img src="images/supervised_learning.jpeg" alt="Supervised Learning Workflow">
+                            <div class="img-caption">Fig 2.1: Supervised predictive modeling pipeline.</div>
+                        </div>
+                        <div>
+                            <img src="images/unsupervised_clustering.jpeg" alt="Unsupervised Clustering Mapping">
+                            <div class="img-caption">Fig 2.2: Unsupervised latent space clustering.</div>
+                        </div>
                     </div>
-
-                    <p class="blog-text">
-                        By integrating posterior effect sizes derived from tools like LDpred2, we account for local LD structures and varying causal fraction assumptions, significantly elevating predictive accuracy across diverse validation cohorts.
-                    </p>
                 </section>
 
                 <section id="topic3" class="blog-section">
                     <span class="badge bg-light text-dark mb-2 code-font">Topic 03</span>
-                    <h2 class="blog-title">Mendelian Randomization (MR) Causal Inference</h2>
+                    <h2 class="blog-title">Specialized Domains & Architectures in Deep Learning</h2>
                     <p class="blog-text">
-                        Establishing causality rather than mere correlation is imperative for translating genetic findings into therapeutic targets. Mendelian randomization leverages genetic variants as instrumental variables (IVs) to evaluate the causal effect of an exposure on a clinical outcome.
+                        Different data structures require specialized neural architectures. Multi-Layer Perceptrons handle tabular data, Convolutional Neural Networks process grid-like metrics, Recurrent Networks manage sequences, and Transformers use self-attention to parse biological language and sequences.
                     </p>
-
-                    <div class="medium-img-row">
-                        <div>
-                            <img src="images/mr_1.jpeg" alt="Mendelian Randomization Scatter Plot">
-                            <div class="img-caption">Fig 3.1: Variant effect on exposure versus outcome regression slopes.</div>
-                        </div>
-                        <div>
-                            <img src="images/mr_2.jpeg" alt="MR-Egger Pleiotropy Analysis">
-                            <div class="img-caption">Fig 3.2: MR-Egger intercept evaluation for horizontal pleiotropy.</div>
-                        </div>
+                    <div class="medium-img-single">
+                        <img src="images/transformer_architecture.jpeg" alt="Transformer Self-Attention Mechanism">
+                        <div class="img-caption">Fig 3.1: Self-attention mapping used in modern protein sequence language models.</div>
                     </div>
-
-                    <p class="blog-text">
-                        To protect against violations of instrumental variable assumptions—specifically horizontal pleiotropy—our analytical pipelines systematically deploy sensitivity estimators including MR-Egger regression, weighted median models, and leave-one-out analyses.
-                    </p>
                 </section>
 
                 <section id="topic4" class="blog-section">
                     <span class="badge bg-light text-dark mb-2 code-font">Topic 04</span>
-                    <h2 class="blog-title">Transcriptome-Wide Association (TWAS) Pipelines</h2>
+                    <h2 class="blog-title">Geometric Deep Learning & 3D Spatial Modeling</h2>
                     <p class="blog-text">
-                        Genome-wide association signals frequently localize to non-coding regions, complicating biological interpretation. Transcriptome-wide association studies bridge this gap by predicting gene expression levels from genetic panels and correlating them directly with phenotype data.
+                        Proteins and drug compounds exist in continuous 3D coordinate space rather than flat grids or text files. Geometric deep learning extends neural networks to non-Euclidean domains, treating macromolecules as 3D point clouds and surface meshes where spatial coordinates dictate interactions.
                     </p>
-
-                    <div class="medium-img-single">
-                        <img src="images/twas_1.jpeg" alt="TWAS Colocalization and eQTL Architecture">
-                        <div class="img-caption">Fig 4.1: Colocalization analysis integrating eQTL weights with GWAS summary data.</div>
+                    <div class="medium-img-row">
+                        <div>
+                            <img src="images/geom_dl_1.jpeg" alt="Protein Point Cloud Spatial Graph">
+                            <div class="img-caption">Fig 4.1: 3D coordinate point cloud mapping of amino acid residues.</div>
+                        </div>
+                        <div>
+                            <img src="images/geom_dl_2.jpeg" alt="Surface Mesh Discretization">
+                            <div class="img-caption">Fig 4.2: Surface mesh analysis of active binding pockets.</div>
+                        </div>
                     </div>
-
-                    <p class="blog-text">
-                        Utilizing reference expression weights from panels such as GTEx alongside S-PrediXcan and FUSION scripts, we successfully prioritize putative causal genes, illuminating target mechanisms for downstream wet-lab validation loops.
-                    </p>
                 </section>
 
                 <section id="topic5" class="blog-section">
                     <span class="badge bg-light text-dark mb-2 code-font">Topic 05</span>
-                    <h2 class="blog-title">Large-Scale Multi-Omics Data Fusion & Survival Metrics</h2>
+                    <h2 class="blog-title">SE(3)-Equivariant Neural Networks</h2>
                     <p class="blog-text">
-                        The ultimate frontier in statistical genetics is the synthesis of disparate biological layers—genomics, transcriptomics, and proteomics—with longitudinal clinical endpoints. 
+                        Physical laws dictate that rotating a molecule should not alter its underlying behavior. SE(3)-Equivariant Neural Networks build symmetry directly into the architecture, ensuring that spatial transformations preserve invariance and equivariance properties mathematically.
                     </p>
+                    <div class="medium-img-single">
+                        <img src="images/equivariant_1.jpeg" alt="SE(3) Equivariant Transformations">
+                        <div class="img-caption">Fig 5.1: Tensor field networks maintaining rotation consistency across coordinate axes.</div>
+                    </div>
+                </section>
 
+                <section id="topic6" class="blog-section">
+                    <span class="badge bg-light text-dark mb-2 code-font">Topic 06</span>
+                    <h2 class="blog-title">Generative AI: Diffusion Models & GNNs</h2>
+                    <p class="blog-text">
+                        Graph Neural Networks handle molecular bonds and atomic neighborhoods via message-passing paradigms, while diffusion models reverse noising trajectories to generate novel protein structures and therapeutic compounds de novo.
+                    </p>
                     <div class="medium-img-row">
                         <div>
-                            <img src="images/multiomics_1.jpeg" alt="Multi-Omics Integration Heatmap">
-                            <div class="img-caption">Fig 5.1: Multi-omics block integration clustering signatures.</div>
+                            <img src="images/gnn_1.jpeg" alt="GNN Message Passing">
+                            <div class="img-caption">Fig 6.1: Message passing across atomic bond graphs.</div>
                         </div>
                         <div>
-                            <img src="images/multiomics_2.jpeg" alt="Cox Proportional Hazards Survival Curve">
-                            <div class="img-caption">Fig 5.2: Penalized regression survival stratification curves.</div>
+                            <img src="images/diffusion_1.jpeg" alt="Diffusion Denoising Trajectory">
+                            <div class="img-caption">Fig 6.2: Generative stochastic denoising from random noise to folded backbones.</div>
                         </div>
                     </div>
-
-                    <p class="blog-text">
-                        Our capstone pipeline utilizes regularized multivariate methods and Cox Proportional Hazards modeling to translate complex genomic scores into robust prognostic clinical markers, aligning completely with the high-caliber methodological research pursued at institutions like the University of Lausanne (UNIL FBM).
-                    </p>
                 </section>
 
             </div>
