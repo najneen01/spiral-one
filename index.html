@@ -581,37 +581,46 @@
 
 
 
-<div class="domains-section-full" id="product">
-    <div class="container">
-        
-        <div class="container mb-4 px-0">
-            <div class="capabilities-popup-bar" id="productsPopupBar" onclick="toggleProductsPanel()">
-                <div class="popup-indicator code-font"><i class="fa-solid fa-bolt me-1"></i> Core Stack</div>
-                <h2 class="fw-bold text-dark mb-2">Products</h2>
-                <p class="text-muted mb-0">Web-based portals, analytical apps, and custom software services for precision disease modeling. (Click to Expand / Collapse Domains)</p>
-            </div>
-        </div>
+</div>
 
-        <div id="productsPanel" class="dropup-panel-wrapper collapsed-panel">
-            <div class="dropup-inner-content">
-                <main class="container py-2 px-0">
-                    <div class="product-spotlight-banner mb-0">
-                        <div class="row align-items-center">
-                            <div class="col-lg-8">
-                                <span class="badge text-uppercase tracking-wider px-3 py-1 mb-2 code-font" style="background: rgba(183, 148, 244, 0.2); color: #b794f4;">Featured Platform Product</span>
-                                <h2 class="fw-bold mb-3">Spiral One Matrix Suite</h2>
-                                <p class="text-white-50 mb-0">An interactive, production-ready web application built for executing streamlined computational matrix calculations and advanced multi-omics metrics analysis directly in your browser.</p>
-                            </div>
-                            <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                                <a href="https://spiralone-matrix-suite.streamlit.app/" target="_blank" class="btn btn-premium btn-lg shadow">
-                                    <i class="fa-solid fa-rocket me-2"></i>Launch App
-                                </a>
+        </div>
+    </div>
+
+    <div class="domains-section-full" id="product">
+        <div class="container">
+            
+            <div class="container mb-4 px-0">
+                <div class="capabilities-popup-bar" id="productsPopupBar" onclick="toggleProductsPanel()">
+                    <div class="popup-indicator code-font"><i class="fa-solid fa-bolt me-1"></i> Core Stack</div>
+                    <h2 class="fw-bold text-dark mb-2">Products</h2>
+                    <p class="text-muted mb-0">Web-based portals, analytical apps, and custom software services for precision disease modeling. (Click to Expand / Collapse Domains)</p>
+                </div>
+            </div>
+
+            <div id="productsPanel" class="dropup-panel-wrapper collapsed-panel">
+                <div class="dropup-inner-content">
+                    <main class="container py-2 px-0">
+                        <div class="product-spotlight-banner mb-0">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8">
+                                    <span class="badge text-uppercase tracking-wider px-3 py-1 mb-2 code-font" style="background: rgba(183, 148, 244, 0.2); color: #b794f4;">Featured Platform Product</span>
+                                    <h2 class="fw-bold mb-3">Spiral One Matrix Suite</h2>
+                                    <p class="text-white-50 mb-0">An interactive, production-ready web application built for executing streamlined computational matrix calculations and advanced multi-omics metrics analysis directly in your browser.</p>
+                                </div>
+                                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                                    <a href="https://spiralone-matrix-suite.streamlit.app/" target="_blank" class="btn btn-premium btn-lg shadow">
+                                        <i class="fa-solid fa-rocket me-2"></i>Launch App
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </main>
+                    </main>
+                </div>
             </div>
+
         </div>
+  
+    
 
     </div>
 </div>
@@ -814,5 +823,57 @@
             headerBar.classList.toggle('collapsed');
         }
     </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+        // Controls the Research Domains panel
+        function toggleDropUpPanel() {
+            const panel = document.getElementById('dropupPanel');
+            const headerBar = document.querySelector('#domains .capabilities-popup-bar');
+            
+            panel.classList.toggle('collapsed-panel');
+            headerBar.classList.toggle('collapsed');
+        }
+
+        // Controls the Products panel
+        function toggleProductsPanel() {
+            const panel = document.getElementById('productsPanel');
+            const headerBar = document.getElementById('productsPopupBar');
+            
+            panel.classList.toggle('collapsed-panel');
+            headerBar.classList.toggle('collapsed');
+        }
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+        // Controls the Research Domains panel
+        function toggleDropUpPanel() {
+            const panel = document.getElementById('dropupPanel');
+            const headerBar = document.querySelector('#domains .capabilities-popup-bar');
+            
+            panel.classList.toggle('collapsed-panel');
+            headerBar.classList.toggle('collapsed');
+        }
+
+        // Controls the Products panel
+        function toggleProductsPanel() {
+            const panel = document.getElementById('productsPanel');
+            const headerBar = document.getElementById('productsPopupBar');
+            
+            panel.classList.toggle('collapsed-panel');
+            headerBar.classList.toggle('collapsed');
+        }
+    </script>
+
+
+    
 </body>
 </html>
